@@ -1,0 +1,18 @@
+.LevelButton {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    background-color: #F72585;
+    border-radius: 10px;
+    border-color: #ffffff;
+    width: 241px;
+    height: 82px;
+    margin-right: 2rem;
+}
+
+button .text {
+    font-size: 3vh;
+    color: #fff;
+}
