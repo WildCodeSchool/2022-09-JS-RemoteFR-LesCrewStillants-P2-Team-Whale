@@ -4,10 +4,7 @@ export default function LevelButton() {
   return (
     <div className="LevelButton">
       <button type="button" onClick>
-        <div className="text">FACILE</div>
-      </button>
-      <button type="button" onClick>
-        <div className="text">DIFFICILE</div>
+        <div className="text">JOUEZ MAINTENANT</div>
       </button>
     </div>
   );
