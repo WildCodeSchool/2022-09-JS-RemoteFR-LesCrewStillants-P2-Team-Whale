@@ -17,6 +17,8 @@
   },
   "plugins": ["react", "import"],
   "rules": {
+    "react/prop-types": 0,
+    "import/no-unresolved": [0, { "caseSensitive": false }],
     "no-console": "off",
     "react/prop-types": 0,
     "no-restricted-syntax": [

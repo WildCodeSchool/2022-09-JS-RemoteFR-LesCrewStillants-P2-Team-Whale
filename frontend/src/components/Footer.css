@@ -1,0 +1,96 @@
+.footer {
+  margin: 0;
+  height: 500px;
+  width: 100%;
+  background-color: #0d1b2a;
+  font-family: "open sans";
+}
+
+.haut {
+  display: flex;
+  justify-content: space-around;
+  height: 250px;
+}
+
+.image {
+  margin-top: 2rem;
+  width: 50vh;
+  height: 250px;
+}
+
+.description {
+  margin-top: 2rem;
+  background-color: #0d1b2a;
+  color: #f72585;
+  width: 50vh;
+  height: 250px;
+  border: solid 3px #f72585;
+}
+
+.bas {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-around;
+}
+
+.nameplanete {
+  background-color: #0d1b2a;
+  color: white;
+  text-align: right;
+  margin-right: 19%;
+  font-size: 1.5rem;
+}
+
+.yoyo {
+  height: 100px;
+  width: 100px;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    height: 380px;
+    width: 100%;
+    background-color: #0d1b2a;
+    margin: 0;
+  }
+
+  .nameplanete {
+    display: none;
+  }
+
+  .QV {
+    display: none;
+  }
+
+  img {
+    height: 20vh;
+    width: 20vh;
+  }
+
+  .haut {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .description {
+    width: 20vh;
+  }
+
+  .image {
+    width: 20vh;
+  }
+
+  .fb {
+    height: 7vh;
+    width: 7vh;
+  }
+
+  .instagram {
+    height: 7vh;
+    width: 7vh;
+  }
+
+  .bas {
+    margin-top: 3rem;
+  }
+}

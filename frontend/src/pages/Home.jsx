@@ -1,36 +1,41 @@
-import Counter from "@components/Counter";
-import logo from "@assets/logo.svg";
+import LevelButton from "@components/LevelButton";
+// eslint-disable-next-line no-unused-vars
+import "./Home.css";
+import MyTabs from "@components/TableScore";
+import wild from "@assets/wild-logo.png";
 
 export default function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
+    <>
+      <header className="quiz-header">
+        <h1>Testez vos connaissances du système solaire :</h1>
+        <LevelButton />
+      </header>
+      <div className="scores-table">
+        <h2>DERNIERS SCORES</h2>
+        <MyTabs />
+      </div>
+      <div className="project">
+        <h3>NOTRE PROJET</h3>
+        <section className="project-content">
+          <div className="project-description">
+            <p>
+              Lorem ipsum dolor sit amet. Non distinctio aspernatur ea
+              voluptatibus culpa est excepturi facilis. Non labore impedit aut
+              dicta deleniti aut explicabo maiores nam eveniet veniam ut ullam
+              corporis consequuntur voluptate.
+            </p>
 
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+            <p>
+              Lorem ipsum dolor sit amet. Non distinctio aspernatur ea
+              voluptatibus culpa est excepturi facilis. Non labore impedit aut
+              dicta deleniti aut explicabo maiores nam eveniet veniam ut ullam
+              corporis consequuntur voluptate.
+            </p>
+          </div>
+          <img className="logo-wild" src={wild} alt="wild-logo" />
+        </section>
+      </div>
+    </>
   );
 }
