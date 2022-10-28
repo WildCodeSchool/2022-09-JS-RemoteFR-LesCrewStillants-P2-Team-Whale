@@ -3,10 +3,13 @@ import LevelButton from "@components/LevelButton";
 import "./Home.css";
 import MyTabs from "@components/TableScore";
 import wild from "@assets/wild-logo.png";
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
 
 export default function Home() {
   return (
     <>
+      <Navbar />
       <header className="quiz-header">
         <h1>Testez vos connaissances du système solaire :</h1>
         <LevelButton />
@@ -36,6 +39,7 @@ export default function Home() {
           <img className="logo-wild" src={wild} alt="wild-logo" />
         </section>
       </div>
+      <Footer />
     </>
   );
 }
