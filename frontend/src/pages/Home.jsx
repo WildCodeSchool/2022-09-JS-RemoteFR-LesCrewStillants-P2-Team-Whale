@@ -4,6 +4,7 @@ import "./Home.css";
 import MyTabs from "@components/TableScore";
 import wild from "@assets/wild-logo.png";
 import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
           <img className="logo-wild" src={wild} alt="wild-logo" />
         </section>
       </div>
+      <Footer />
     </>
   );
 }
