@@ -1,4 +1,4 @@
-import "./footer.css";
+import "./Footer.css";
 import imageplanete from "@assets/imageplanete.svg";
 import facebook from "@assets/Facebook.svg";
 import insta from "@assets/instagrame.svg";
