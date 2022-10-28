@@ -21,6 +21,11 @@ code {
   pointer-events: none;
 }
 
+.slidebox {
+  width: 100%;
+  height: 250px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
