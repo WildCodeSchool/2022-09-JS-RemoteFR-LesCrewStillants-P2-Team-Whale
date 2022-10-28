@@ -1,0 +1,43 @@
+/* NAVBAR */
+/*Mobile*/
+
+/* Desktop */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(https://fonts.googleapis.com/css?family=Audiowide:regular);
+
+.Navbar {
+  padding: 3%;
+  background-color: #0d1b2a;
+}
+
+a {
+  text-decoration: none;
+  color: #0d1b2a;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+li {
+  font-size: 70% bold;
+  font-family: "Open Sans";
+}
+
+ul button {
+  background-color: #f72585;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+
+.Login {
+  color: #f72585;
+  font-size: 70% bold;
+  font-family: "Open Sans";
+  display: flex;
+  justify-content: end;
+}

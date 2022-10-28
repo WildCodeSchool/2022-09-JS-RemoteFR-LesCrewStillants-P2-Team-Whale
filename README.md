@@ -1,9 +1,21 @@
-## Concept
+# Team Dev
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+  - Victoire 
+  - Valentin
+  - Yohan
+  - Mathieu
+  - Sébastien
 
-## Setup & Use
+## Project and Site Architecture
+
+![image](https://user-images.githubusercontent.com/104688712/196696859-34c0d0e9-799f-4f62-8861-1062ebb1811b.png)
+
+Creation of a Quiz about space from the API Open Data Système Solaire (https://api.le-systeme-solaire.net/)
+
+## GitHub Repository
+
+![image](https://user-images.githubusercontent.com/104688712/196697823-b9837e8b-a2b5-449f-95d2-088d9837f0c0.png)
+
 
 ### Project Initialization
 
