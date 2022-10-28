@@ -26,6 +26,7 @@ function Footer() {
             Valentin
             <br />
             Yohan
+            <br />
           </p>
         </div>
 

@@ -15,7 +15,7 @@
 .image {
   margin-top: 2rem;
   width: 50vh;
-  height: 250px;
+  height: 285px;
 }
 
 .description {
@@ -23,13 +23,13 @@
   background-color: #0d1b2a;
   color: #f72585;
   width: 50vh;
-  height: 250px;
+  height: 285px;
   border: solid 3px #f72585;
 }
 
 .bas {
   display: flex;
-  margin-top: 4rem;
+  margin-top: 6rem;
   justify-content: space-around;
 }
 
