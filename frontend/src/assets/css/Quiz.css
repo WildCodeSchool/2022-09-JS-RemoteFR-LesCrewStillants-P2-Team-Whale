@@ -9,7 +9,7 @@
   --backgroundBorderContainerQuiz: 2px solid aliceblue;
   /* Button variables */
   --buttonQuizBackgroundColor: #f72585;
-  --buttonQuizHoverBackgroundColor: #CC1E6F;
+  --buttonQuizHoverBackgroundColor: #cc1e6f;
   --buttonQuizBoxShadow: 0px 4px 4px aliceblue;
   --buttonQuizActiveBoxShadow: 0px 0px 0px aliceblue;
   /* Text variables */
@@ -122,7 +122,7 @@ body {
     flex-direction: row;
     justify-content: center;
   }
-  
+
   /* Button style */
   .buttonDifficulty {
     background-color: var(--buttonQuizBackgroundColor);

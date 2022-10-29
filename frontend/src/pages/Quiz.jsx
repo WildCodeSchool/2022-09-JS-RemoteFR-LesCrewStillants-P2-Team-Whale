@@ -9,7 +9,7 @@ import "@assets/css/Quiz.css";
 export default function Quiz() {
   return (
     <>
-      <Player className="lottie-background" autoplay loop src={bg}/>
+      <Player className="lottie-background" autoplay loop src={bg} />
       <section className="quiz">
         <img src={logo} alt="Quiz" className="logo" />
         <div className="quizContainer">
