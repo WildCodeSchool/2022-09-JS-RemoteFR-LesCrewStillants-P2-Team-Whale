@@ -16,7 +16,7 @@ function Navbar() {
         </button>
         <Link to="/quiz">
           <button type="button">
-            <li>quizxwccxw</li>
+            <li>Quiz</li>
           </button>
         </Link>
         <button type="button">
