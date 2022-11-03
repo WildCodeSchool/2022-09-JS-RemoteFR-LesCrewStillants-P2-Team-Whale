@@ -7,16 +7,16 @@ function Navbar() {
   return (
     <Menu>
       <a className="menu-item" href="/">
-        Home
+      🌍 - Home
       </a>
       <a className="menu-item" href="/quiz">
-        Quiz
+      ❓- Quiz
       </a>
       <a className="menu-item" href="/services">
-        Wiki
+      📰 - Wiki
       </a>
       <a className="menu-item" href="/contact">
-        Contact us
+      🛰️ - Contact us
       </a>
     </Menu>
   );
