@@ -1,10 +1,37 @@
-import Home from "@pages/Home";
+import React from "react";
+
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
+
+const Home = React.lazy(() => import("@pages/Home"));
+const Quiz = React.lazy(() => import("@pages/Quiz"));
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      {/* <Routes> is a React Router component that allows you to define multiple routes. */}
+      <Routes>
+        {/* <Route> is a React Router component that allows you to define a single route. */}
+        {/* <React.Suspense> is a React component
+        that allows you to define a fallback component while the component is loading. */}
+        <Route
+          index
+          element={
+            <React.Suspense fallback={<>...</>}>
+              <Home />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="quiz"
+          element={
+            <React.Suspense fallback={<>...</>}>
+              <Quiz />
+            </React.Suspense>
+          }
+        />
+      </Routes>
     </div>
   );
 }
