@@ -90,7 +90,8 @@ h2 {
 
   h1 {
     font-size: 2rem;
-    padding-left : 2vh;
+    padding-left : 1vh;
+    padding-right : 1vh;
     text-align: center;
   }
 
