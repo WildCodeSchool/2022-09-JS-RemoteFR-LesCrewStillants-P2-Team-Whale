@@ -121,7 +121,7 @@ body {
     margin-top: 10%;
     width: 20%;
   }
-  
+
   /* Quiz container question (p) text style */
   .quizContainer p {
     color: var(--paragraphQuizColor);
