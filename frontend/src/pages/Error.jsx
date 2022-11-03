@@ -2,7 +2,7 @@ import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import "@assets/css/Error.css";
 import lottieBackground from "@assets/lottie-file/background-quiz.json";
-import test from "@assets/lottie-file/test.json";
+import satellite from "@assets/lottie-file/satellite-error.json";
 
 export default function Error() {
   return (
@@ -19,7 +19,7 @@ export default function Error() {
             className="lottie-error"
             loop
             autoplay
-            src={test}
+            src={satellite}
             style={{ height: "300px", width: "300px" }}
           />
           <div className="errorTitle">404</div>
