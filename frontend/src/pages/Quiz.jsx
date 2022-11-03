@@ -1,10 +1,10 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 
+import "@assets/css/Quiz.css";
+
 import logo from "@assets/logo.png";
 import astronaut from "@assets/lottie-file/astronaut-quiz.json";
 import lottieBackground from "@assets/lottie-file/background-quiz.json";
-
-import "@assets/css/Quiz.css";
 
 export default function Quiz() {
   return (

@@ -1,6 +1,9 @@
 import React from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
+import { Link } from "react-router-dom";
+
 import "@assets/css/Error.css";
+
+import { Player } from "@lottiefiles/react-lottie-player";
 import lottieBackground from "@assets/lottie-file/background-quiz.json";
 import satellite from "@assets/lottie-file/satellite-error.json";
 
@@ -29,9 +32,11 @@ export default function Error() {
             principale
           </p>
           <div className="buttonContainer">
-            <button type="button" className="button">
-              Accueil
-            </button>
+            <Link to="/">
+              <button type="button" className="button">
+                Accueil
+              </button>
+            </Link>
           </div>
         </div>
       </section>
