@@ -1,10 +1,12 @@
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   background-color: #0d1b2a;
   width: 100%;
-  height: 800px;
-  font-family: system-ui, -apple-system, "Open Sans", "Helvetica Neue",
-    sans-serif;
+  height: auto;
+  font-family: "Open Sans", sans-serif;
   color: white;
 }
 
@@ -12,7 +14,7 @@
   height: 475px;
   width: 600px;
   margin-top: -20px;
-  align-items: center;
+  justify-items: center;
 }
 
 .titleR {
@@ -22,9 +24,8 @@
 
 .bas {
   display: flex;
-  justify-content: space-between;
+  height: auto ;
   align-items: center;
-  margin-top: -25px;
 }
 
 img {
@@ -33,8 +34,7 @@ img {
 }
 
 .QV {
-  height: 500px;
-  width: 500px;
+  width: 50vh;
 }
 
 .liens {
@@ -43,6 +43,7 @@ img {
 
 .reseaux {
   padding: 5px;
+  justify-content: center;
 }
 
 .img {
