@@ -7,7 +7,7 @@ button {
   background-color: #f72585;
   border-radius: 10px;
   border-color: #ffffff;
-  width: 241px;
+  width: 38vh;
   height: 82px;
   margin-right: 2rem;
 }
@@ -15,4 +15,13 @@ button {
 button .text {
   font-size: 3vh;
   color: #fff;
+}
+
+button :active{
+  background-color: #f72585;
+  border-radius: 10px;
+  border-color: #ffffff;
+  width: 38vh;
+  height: 82px;
+  margin-right: 2rem;
 }

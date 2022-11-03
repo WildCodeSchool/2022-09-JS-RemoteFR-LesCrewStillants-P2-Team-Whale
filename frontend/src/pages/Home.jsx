@@ -5,12 +5,15 @@ import MyTabs from "@components/TableScore";
 import wild from "@assets/wild-logo.png";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
+import logo from "@assets/logo-quizverse.svg";
+import React from "react";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <header className="quiz-header">
+        <img src={logo} alt="QuizVerse Logo" />
         <h1>Testez vos connaissances du système solaire :</h1>
         <LevelButton />
       </header>
