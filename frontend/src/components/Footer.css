@@ -11,9 +11,9 @@
 }
 
 .Imageplanets {
-  height: 475px;
-  width: 600px;
-  margin-top: -20px;
+  margin-top: 4vh;
+  height: auto;
+  width: 50vh;
   justify-items: center;
 }
 
@@ -28,12 +28,12 @@
   align-items: center;
 }
 
-img {
+.bas img {
   height: 50px;
   width: 50px;
 }
 
-.QV {
+.bas .QV {
   width: 50vh;
 }
 
