@@ -15,9 +15,10 @@
   color: #fff;
 }
 
+
 .level :active {
   background-color: #fff;
-  color: #fff;
+  color: #000000;
 }
 
 .tablescores {
