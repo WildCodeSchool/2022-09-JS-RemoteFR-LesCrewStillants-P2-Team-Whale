@@ -1,17 +1,33 @@
 :root {
+  /*Text font for page */
   --textFont: "open sans";
+  /*Page background color */
   --backgroundQuizColor: #3a0ca3;
+  /* Container quiz variables */
   --backgroundContainerQuizColor: #0d1b2a;
-  --backgroundQuizBoxShadow: 0px 4px 4px rgba(31, 20, 223, 0.8);
+  --backgroundContainerQuizBoxShadow: inset 0px 4px 4px rgba(72, 12, 168, 0.8);
+  --backgroundBorderContainerQuiz: 2px solid aliceblue;
+  /* Button variables */
   --buttonQuizBackgroundColor: #f72585;
+  --buttonQuizHoverBackgroundColor: #cc1e6f;
+  --buttonQuizBoxShadow: 0px 4px 4px aliceblue;
+  --buttonQuizActiveBoxShadow: 0px 0px 0px aliceblue;
+  /* Text variables */
+  --titleOneColor: aliceblue;
+  --paragraphQuizColor: aliceblue;
+  --textButtonQuizColor: aliceblue;
 }
 
+/* Page body */
 body {
   margin: 0;
   font-family: var(--textFont);
   background-color: var(--backgroundQuizColor);
 }
 
+/* Quiz section
+----------------------------------------------- */
+/* Section style */
 .quiz {
   display: flex;
   flex-direction: column;
@@ -20,94 +36,113 @@ body {
   position: relative;
 }
 
+/* QuizVerse logo */
+.logo {
+  margin: auto;
+  margin-top: 15%;
+  width: 70%;
+}
+
+/* Quiz container style */
 .quizContainer {
   background-color: var(--backgroundContainerQuizColor);
   width: auto;
   padding: 30px;
   margin: 20px;
   box-sizing: border-box;
-  border: 2px solid #fefefe;
-  box-shadow: inset 0px 4px 4px rgba(72, 12, 168, 0.8);
+  border: var(--backgroundBorderContainerQuiz);
+  box-shadow: var(--backgroundContainerQuizBoxShadow);
   border-radius: 20px;
 }
 
+/* Quiz container title (h1) text style */
 .quizContainer h1 {
-  color: aliceblue;
+  color: var(--titleOneColor);
   text-align: center;
 }
 
+/* Quiz container question (p) text style */
 .quizContainer p {
-  color: aliceblue;
+  color: var(--paragraphQuizColor);
   text-align: center;
   font-size: 20px;
 }
 
+/* Buttons
+=============================*/
+/* Button container */
 .buttonContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+/* Button style */
 .buttonDifficulty {
   background-color: var(--buttonQuizBackgroundColor);
   border: none;
-  color: white;
+  color: var(--textButtonQuizColor);
   padding: 16px 32px;
   text-align: center;
   font-size: 16px;
   margin: 20px 15px;
   cursor: pointer;
-  box-shadow: 0px 4px 4px #ffffff;
+  box-shadow: var(--buttonQuizBoxShadow);
   border-radius: 15px;
 }
 
+/* Button hover style */
 .buttonDifficulty:hover {
-  background-color: var(--buttonQuizBackgroundColor);
+  background-color: var(--buttonQuizHoverBackgroundColor);
 }
 
-.logo {
-  margin: 20px;
-  margin-top: 50%;
-  width: 70%;
+.buttonDifficulty:active {
+  box-shadow: var(--buttonQuizActiveBoxShadow);
+  transform: translateY(4px);
 }
 
-.quizImg {
+/* Lottie animation
+=============================*/
+/* Lottie animation background for quiz */
+.lottie-background {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
+  visibility: hidden;
 }
 
 @media screen and (min-width: 700px) {
+  /* QuizVerse logo */
   .logo {
     margin: auto;
     margin-top: 10%;
     width: 20%;
   }
-
-  .quizImg {
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-    width: 50%;
-    margin: auto;
-    margin-bottom: 50px;
+  
+  /* Quiz container question (p) text style */
+  .quizContainer p {
+    color: var(--paragraphQuizColor);
+    text-align: center;
+    font-size: 30px;
   }
 
+  /* Buttons
+  =============================*/
+  /* Button container */
   .buttonContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
-  .quizContainer p {
-    color: aliceblue;
-    text-align: center;
-    font-size: 30px;
-  }
-
+  /* Button style */
   .buttonDifficulty {
     background-color: var(--buttonQuizBackgroundColor);
     border: none;
-    color: white;
+    color: var(--textButtonQuizColor);
     padding: 16px 32px;
     text-align: center;
     font-size: 16px;
@@ -117,5 +152,17 @@ body {
     text-align: center;
     height: 100px;
     width: 150px;
+  }
+
+  /* Lottie animation
+  =============================*/
+  /* Lottie animation background for quiz */
+  .lottie-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 }
