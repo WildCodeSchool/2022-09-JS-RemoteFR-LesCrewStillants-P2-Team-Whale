@@ -5,10 +5,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
 @import url(https://fonts.googleapis.com/css?family=Audiowide:regular);
 
-.Navbar {
+/* .Navbar {
   padding: 3%;
   background-color: #0d1b2a;
-}
+} */
 
 #page-wrap {
   text-align: center;
@@ -28,11 +28,11 @@
 }
 
 .bm-item:hover {
-  color: white;
+  color: #f72585;
 }
 
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
   width: 36px;
   height: 30px;
   right: 36px;
@@ -41,7 +41,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: aliceblue;
+  background: #f72585;
 }
 
 /* Position and sizing of clickable cross button */
@@ -52,19 +52,19 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #c7bdbd;
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: #000;
+  background: #0d1b2a;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #373a47;
+  fill: #0d1b2a;
 }
 
 /* Wrapper for item list */
