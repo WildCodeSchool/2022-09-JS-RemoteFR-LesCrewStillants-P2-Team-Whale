@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Navbar />
       <header className="quiz-header">
-        <img src={logo} alt="QuizVerse Logo" />
+        <img src={logo} alt="QuizVerse Logo" className="logo" />
         <h1>Testez vos connaissances du système solaire :</h1>
         <LevelButton />
       </header>
