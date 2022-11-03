@@ -24,7 +24,7 @@ function Footer() {
           <a className="liens" href="Home.jsx">
             Contact Us{" "}
           </a>
-          <p className="Mention"> Mention légale</p>
+          <p className="Mention"> Mentions légales</p>
         </div>
       </div>
     </div>

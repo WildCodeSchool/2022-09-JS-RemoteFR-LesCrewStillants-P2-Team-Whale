@@ -3,13 +3,12 @@
   flex-direction: row;
 }
 
-button {
+.btn-game {
   background-color: #f72585;
   border-radius: 10px;
   border-color: #ffffff;
   width: 38vh;
   height: 82px;
-  margin-right: 2rem;
 }
 
 button .text {
