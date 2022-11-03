@@ -30,7 +30,7 @@ export default function Quiz() {
             <button type="submit" className="buttonDifficulty">
               Facile
             </button>
-            <button type="submit" className="buttonDifficulty">
+            <button type="button" className="buttonDifficulty">
               Difficile
             </button>
           </div>
