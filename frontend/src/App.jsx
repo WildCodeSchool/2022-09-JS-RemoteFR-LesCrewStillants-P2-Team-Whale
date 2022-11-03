@@ -6,6 +6,7 @@ import "./App.css";
 
 const Home = React.lazy(() => import("@pages/Home"));
 const Quiz = React.lazy(() => import("@pages/Quiz"));
+const Error = React.lazy(() => import("@pages/Error"));
 
 function App() {
   return (
@@ -28,6 +29,14 @@ function App() {
           element={
             <React.Suspense fallback={<>...</>}>
               <Quiz />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <React.Suspense fallback={<>...</>}>
+              <Error />
             </React.Suspense>
           }
         />
