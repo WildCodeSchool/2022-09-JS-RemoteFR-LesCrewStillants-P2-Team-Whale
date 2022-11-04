@@ -6,7 +6,7 @@
 }
 
 .level {
-  background-color: transparent;
+  background-color: #000000;
   border: none;
   height: 5vh;
   width: 25vh;
@@ -15,9 +15,20 @@
   color: #fff;
 }
 
+.levelisActive {
+  background-color: #f72585;
+  border: none;
+  height: 6vh;
+  width: 25vh;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  border-radius: 10px;
+
 .level :active {
   background-color: #fff;
   color: #000000;
+
 }
 
 .tablescores {
