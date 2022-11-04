@@ -83,7 +83,7 @@ h2 {
   width: 25%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .project-content {
     flex-direction: column;
   }
