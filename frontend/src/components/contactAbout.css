@@ -9,10 +9,14 @@
   font-size: 1.4em;
   line-height: 3vmin;
   color: #fefefe;
-  margin-top: 40vmin;
-  margin-right: 22vmin;
-  max-width: 550px;
-  padding: 1vmin;
+  margin-top: 15vmin;
+  max-width: 500px;
+  padding: 10%;
+}
+
+.containerUs {
+  display: flex;
+  margin-left: 50%;
 }
 
 .title {
@@ -30,5 +34,17 @@
     margin-left: 18vmin;
     margin-right: 30vmin;
     padding: 5%;
+  }
+
+  .containerUs {
+    display: flex;
+    margin-left: 15%;
+    font-size: 1.5em;
+    margin-bottom: 30%;
+  }
+
+  .title {
+    font-weight: bold;
+    text-align: center;
   }
 }

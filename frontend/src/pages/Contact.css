@@ -10,6 +10,10 @@ body {
   font-family: "Open Sans";
 }
 
+.div {
+  display: flex;
+}
+
 .contactbox {
   display: flex;
 }
@@ -30,21 +34,6 @@ body {
   .contactbox {
     display: flex;
     flex-direction: column;
-    font-size: 3.3vmin;
-  }
-
-  .containerbox {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contactText {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contactForm {
-    display: flex;
-    flex-direction: column;
+    font-size: 2vmin;
   }
 }

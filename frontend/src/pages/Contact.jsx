@@ -7,11 +7,11 @@ import "./Contact.css";
 export default function Contact() {
   return (
     <div className="contactbox">
-      <div id="contactForm">
+      <div className="contactForm">
         <ContactForm />
       </div>
       <div className="spaceholder"> </div>
-      <div id="contactText">
+      <div className="contactText">
         <ContactAbout />
       </div>
     </div>
