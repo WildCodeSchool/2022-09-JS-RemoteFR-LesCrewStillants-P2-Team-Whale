@@ -1,0 +1,65 @@
+@import "@assets/css/variables.css";
+
+.buttonAnswerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  max-width: 80vw;
+}
+
+.answerButton {
+  word-wrap: break-word;
+  width: 100%;
+  min-height: 50px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  background-color: var(--buttonAnswerBackgroundColor);
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.answerButton:hover {
+  background-color: var(--buttonAnswerHoverBackgroundColor);
+  color: var(--buttonAnswerHoverTextColor);
+}
+
+/* Button style */
+.resetButton {
+  background-color: var(--buttonResetBackgroundColor);
+  border: none;
+  color: var(--textButtonResetColor);
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 20px 15px;
+  cursor: pointer;
+  box-shadow: var(--buttonResetBoxShadow);
+  border-radius: 15px;
+}
+
+/* Button hover style */
+.resetButton:hover {
+  background-color: var(--buttonResetHoverBackgroundColor);
+}
+
+.resetButton:active {
+  box-shadow: var(--buttonResetActiveBoxShadow);
+  transform: translateY(4px);
+}
+
+@media screen and (min-width: 700px) {
+  .buttonAnswerContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .answerButton {
+    width: 45%;
+  }
+}
