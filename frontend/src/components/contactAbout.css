@@ -1,0 +1,34 @@
+.contactUs {
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 5px 5px 10px #eb227e, -5px -5px 10px #ff268c;
+  border-radius: 40px;
+  border: 1px solid white;
+  font-family: "Open Sans";
+  font-size: 1.4em;
+  line-height: 3vmin;
+  color: #fefefe;
+  margin-top: 40vmin;
+  margin-right: 22vmin;
+  max-width: 550px;
+  padding: 1vmin;
+}
+
+.title {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  .contactUs {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    line-height: 4vmin;
+    color: #fefefe;
+
+    margin-left: 18vmin;
+    margin-right: 30vmin;
+    padding: 5%;
+  }
+}
