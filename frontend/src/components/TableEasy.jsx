@@ -5,14 +5,14 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import scoreGames from "@components/dataEasy";
+import scoreEasy from "@components/scoreEasy";
 
 export default function EasyTable() {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableBody>
-          {scoreGames.map((score) => (
+          {scoreEasy.map((score) => (
             <TableRow
               key={score.pseudo}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

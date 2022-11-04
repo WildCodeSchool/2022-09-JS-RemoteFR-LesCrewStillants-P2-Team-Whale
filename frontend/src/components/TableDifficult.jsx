@@ -5,7 +5,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import scoreDifficult from "@components/dataDifficult";
+import scoreDifficult from "@components/scoreDifficult";
 
 export default function TableDifficult() {
   return (
