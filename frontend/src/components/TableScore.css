@@ -15,7 +15,6 @@
   color: #fff;
 }
 
-
 .levelisActive {
   background-color: #f72585;
   border: none;
@@ -25,6 +24,11 @@
   padding: 0;
   color: #fff;
   border-radius: 10px;
+
+.level :active {
+  background-color: #fff;
+  color: #000000;
+
 }
 
 .tablescores {

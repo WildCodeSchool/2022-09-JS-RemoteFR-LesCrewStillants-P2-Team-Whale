@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 import "@assets/css/Error.css";
 
-import { Player } from "@lottiefiles/react-lottie-player";
 import lottieBackground from "@assets/lottie-file/background-quiz.json";
 import satellite from "@assets/lottie-file/satellite-error.json";
 
 export default function Error() {
   return (
-    <div className="Error">
+    <>
       <Player
         loop
         src={lottieBackground}
@@ -40,6 +40,6 @@ export default function Error() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
