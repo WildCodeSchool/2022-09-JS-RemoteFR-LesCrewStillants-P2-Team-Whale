@@ -1,0 +1,109 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background-color: #0d1b2a;
+  width: 100%;
+  height: auto;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+.Imageplanets {
+  margin-top: 4vh;
+  height: auto;
+  width: 50vh;
+  justify-items: center;
+}
+
+.titleR {
+  color: white;
+  font-size: 20px;
+}
+
+.bas {
+  display: flex;
+  height: auto ;
+  align-items: center;
+}
+
+.bas img {
+  height: 50px;
+  width: 50px;
+}
+
+.bas .QV {
+  width: 50vh;
+}
+
+.liens {
+  color: white;
+}
+
+.reseaux {
+  padding: 5px;
+  justify-content: center;
+}
+
+.img {
+  padding: 5px;
+}
+
+.contactUs {
+  padding: 10px;
+}
+
+/* VERSION MOBILE */
+
+@media screen and (max-width: 480px) {
+  .footer {
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+
+  .Imageplanets {
+    width: 100%;
+  }
+
+  .titleR {
+    display: none;
+  }
+
+  .bas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .QV {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contactUs p {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .contactUs a {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 5px;
+  }
+
+  .bas .img {
+    margin-top: 2vh;
+    height: 5vh;
+    width: 5vh;
+    padding: 2vh;
+  }
+}
