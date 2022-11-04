@@ -24,6 +24,7 @@
   padding: 0;
   color: #fff;
   border-radius: 10px;
+}
 
 .level :active {
   background-color: #fff;
