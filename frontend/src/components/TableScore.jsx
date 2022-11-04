@@ -5,24 +5,31 @@ import EasyTable from "@components/TableEasy";
 import { useState } from "react";
 
 export default function MyTabs() {
-  const [active, setIsActive] = useState();
+  const [isEasyActive, setIsEasyActive] = useState(true);
+  const [isDifficultActive, setIsDifficultActive] = useState(false);
 
-  const handleClickActive = () => {
-    setIsActive(!active);
+  const handleEasyActive = () => {
+    setIsEasyActive(true);
+    setIsDifficultActive(false);
+  };
+
+  const handleDifficultActive = () => {
+    setIsEasyActive(false);
+    setIsDifficultActive(true);
   };
 
   return (
     <Tab.Group>
       <Tab.List className="selectlevel">
         <Tab
-          onClick={handleClickActive}
-          className={active ? "levelisActive" : "level"}
+          onClick={handleEasyActive}
+          className={isEasyActive ? "levelisActive" : "level"}
         >
           Facile
         </Tab>
         <Tab
-          onClick={handleClickActive}
-          className={active ? "levelisActive" : "level"}
+          onClick={handleDifficultActive}
+          className={isDifficultActive ? "levelisActive" : "level"}
         >
           Difficile
         </Tab>

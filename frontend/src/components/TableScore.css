@@ -19,11 +19,12 @@
 .levelisActive {
   background-color: #f72585;
   border: none;
-  height: 5vh;
+  height: 6vh;
   width: 25vh;
   margin: 0;
   padding: 0;
   color: #fff;
+  border-radius: 10px;
 }
 
 .tablescores {
