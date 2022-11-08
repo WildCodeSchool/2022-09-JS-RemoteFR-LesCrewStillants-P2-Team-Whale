@@ -1,5 +1,8 @@
 @import "@assets/css/variables.css";
 
+/* Buttons
+=============================*/
+/* Button container */
 .buttonAnswerContainer {
   display: flex;
   flex-direction: column;
@@ -9,6 +12,7 @@
   max-width: 80vw;
 }
 
+/* Button answer style */
 .answerButton {
   word-wrap: break-word;
   width: 100%;
@@ -23,12 +27,13 @@
   cursor: pointer;
 }
 
+/* Button answer hover style */
 .answerButton:hover {
   background-color: var(--buttonAnswerHoverBackgroundColor);
   color: var(--buttonAnswerHoverTextColor);
 }
 
-/* Button style */
+/* Button reset style */
 .resetButton {
   background-color: var(--buttonResetBackgroundColor);
   border: none;
@@ -42,23 +47,28 @@
   border-radius: 15px;
 }
 
-/* Button hover style */
+/* Button reset hover style */
 .resetButton:hover {
   background-color: var(--buttonResetHoverBackgroundColor);
 }
 
+/* Button reset active style */
 .resetButton:active {
   box-shadow: var(--buttonResetActiveBoxShadow);
   transform: translateY(4px);
 }
 
 @media screen and (min-width: 700px) {
+  /* Buttons
+  =============================*/
+  /* Button container style */
   .buttonAnswerContainer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 
+  /* Button answer style */
   .answerButton {
     width: 45%;
   }

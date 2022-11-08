@@ -1,7 +1,7 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 
 import Navbar from "@components/Navbar";
-import QuizQuestion from "@components/Quiz/QuizQuestion";
+import QuizScore from "@components/Quiz/QuizScore";
 
 import "@assets/css/Quiz.css";
 
@@ -28,7 +28,7 @@ export default function Quiz() {
         <img src={logo} alt="Quiz" className="logo" />
         {/* Container for the quiz component */}
         <div className="quizContainer">
-          <QuizQuestion />
+          <QuizScore />
         </div>
       </section>
     </>
