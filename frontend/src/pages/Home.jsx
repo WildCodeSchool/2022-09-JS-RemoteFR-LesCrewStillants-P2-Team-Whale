@@ -1,7 +1,7 @@
 import LevelButton from "@components/LevelButton";
 // eslint-disable-next-line no-unused-vars
 import "./Home.css";
-import MyTabs from "@components/TableScore";
+import TableScore from "@components/TableScore";
 import wild from "@assets/wild-logo.png";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
@@ -19,7 +19,7 @@ export default function Home() {
       </header>
       <div className="scores-table">
         <h2>DERNIERS SCORES</h2>
-        <MyTabs />
+        <TableScore />
       </div>
       <div className="project">
         <h3>NOTRE PROJET</h3>
