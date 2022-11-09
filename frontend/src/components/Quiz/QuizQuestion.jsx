@@ -5,7 +5,6 @@ import questionService from "@services/QuestionService";
 import { API_BASE_URL } from "../../auth/AppConfig";
 import "@assets/css/QuizQuestion.css";
 
-// Create a component for the quiz question
 export default function QuizQuestion() {
   const [question, setQuestion] = useState(undefined);
 
