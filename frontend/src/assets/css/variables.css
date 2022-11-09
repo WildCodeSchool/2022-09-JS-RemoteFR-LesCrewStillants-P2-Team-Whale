@@ -40,12 +40,28 @@
   /*----------------------------------*/
   /* Variables QuizQuestion component */
   /*----------------------------------*/
+  /* Button variables */
   --buttonAnswerBackgroundColor: aliceblue;
   --buttonAnswerHoverBackgroundColor: #f72585;
   --buttonAnswerHoverTextColor: aliceblue;
   --buttonResetBackgroundColor: #f72585;
-  --textButtonResetColor: aliceblue;
   --buttonResetBoxShadow: 0px 4px 4px aliceblue;
   --buttonResetHoverBackgroundColor: #cc1e6f;
   --buttonResetActiveBoxShadow: 0px 0px 0px aliceblue;
+  /* Text variables */
+  --textButtonResetColor: aliceblue;
+
+  /*-------------------------------*/
+  /* Variables QuizScore component */
+  /*-------------------------------*/
+  /* Input variables */
+  --inputNameBackgroundColor: aliceblue;
+  --inputNameTextColor: #0d1b2a;
+  /* Button variables */
+  --buttonSubmitActiveBoxShadow: 0px 0px 0px aliceblue;
+  --buttonSubmitHoverBackgroundColor: #cc1e6f;
+  --buttonSubmitBoxShadow: 0px 4px 4px aliceblue;
+  --buttonSubmitBackgroundColor: #f72585;
+  /* Text variables */
+  --textButtonSubmitColor: aliceblue;
 }

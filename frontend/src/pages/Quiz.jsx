@@ -1,7 +1,7 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 
 import Navbar from "@components/Navbar";
-import QuizScore from "@components/Quiz/QuizStart";
+import QuizScore from "@components/Quiz/QuizQuestion";
 
 import "@assets/css/Quiz.css";
 
