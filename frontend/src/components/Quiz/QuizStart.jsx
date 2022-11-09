@@ -1,10 +1,7 @@
 import { Player } from "@lottiefiles/react-lottie-player";
-
 import "@assets/css/Quiz.css";
-
 import astronaut from "@assets/lottie-file/astronaut-quiz.json";
 
-// Create a component for the quiz start
 export default function QuizStart() {
   return (
     <>

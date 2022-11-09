@@ -1,7 +1,5 @@
 import { Player } from "@lottiefiles/react-lottie-player";
-
 import "@assets/css/QuizScore.css";
-
 import book from "@assets/lottie-file/book.json";
 
 // Create a component for the quiz score
