@@ -35,9 +35,12 @@ export default function QuizQuestion() {
       <div className="buttonAnswerContainer">
         {
           // I'm using the map function to display the answers
-          question && question[3].answers.map((answer) => (
-            <button className="answerButton">{answer}</button>
-          ))
+          question &&
+            question[3].answers.map((answer) => (
+              <button type="submit" className="answerButton">
+                {answer}
+              </button>
+            ))
         }
       </div>
       <div className="buttonResetContainer">
