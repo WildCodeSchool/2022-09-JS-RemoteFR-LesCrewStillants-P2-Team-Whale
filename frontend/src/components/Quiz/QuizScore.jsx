@@ -19,8 +19,11 @@ export default function QuizScore() {
       <p className="score">Your score</p>
       <p className="score">0 / 10</p>
       <p>Almost there !</p>
-
+      <input className="inputName" type="text" placeholder="Your name" />
       <div className="buttonScoreContainer">
+        <button type="submit" className="buttonSubmit">
+          Submit
+        </button>
         <button type="submit" className="buttonScore">
           Accueil
         </button>

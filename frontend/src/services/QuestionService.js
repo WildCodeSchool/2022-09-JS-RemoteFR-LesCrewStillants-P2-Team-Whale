@@ -11,6 +11,5 @@ questionService.getAll = () => {
   }).then((res) => res); //Return response
 };
 
-
 //export questionService
 export default questionService;

@@ -30,6 +30,8 @@ export default function QuizQuestion() {
         <button type="button" className="answerButton">
           Jaune
         </button>
+      </div>
+      <div className="buttonResetContainer">
         <button type="button" className="resetButton">
           Reset
         </button>
