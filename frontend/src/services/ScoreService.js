@@ -8,7 +8,7 @@ scoreService.getAllEasy = () => {
   return api("/scores/easy", {
     //Route is /scores/easy
     method: "GET",
-  }).then((res) => res); //Return response
+  }).then((res) => res.data); //Return response
 };
 
 //get all hard scores
