@@ -1,12 +1,9 @@
 import { Player } from "@lottiefiles/react-lottie-player";
-
-import "@assets/css/QuizQuestion.css";
-
-import astronaut from "@assets/lottie-file/astronaut-quiz.json";
-
+import { PacmanLoader } from "react-spinners";
 import { useState, useEffect } from "react";
-
 import questionService from "@services/QuestionService";
+import { API_BASE_URL } from "../../auth/AppConfig";
+import "@assets/css/QuizQuestion.css";
 
 // Create a component for the quiz question
 export default function QuizQuestion() {
@@ -20,34 +17,37 @@ export default function QuizQuestion() {
 
   return (
     <>
-      {/* <Player> is a component from the lottiefiles library
-      i using this 'player' for the picture animation */}
-      <Player
-        autoplay
-        loop
-        src={astronaut}
-        style={{ height: "150px", width: "150px" }}
-      />
-      <p>
-        {!question && <div>Chargment</div>}
-        {question && question[3].quest}
-      </p>
-      <div className="buttonAnswerContainer">
-        {
-          // I'm using the map function to display the answers
-          question &&
-            question[3].answers.map((answer) => (
+      {!question && (
+        <PacmanLoader
+          className="pacMan"
+          size={25}
+          color="#ffffff"
+          loading={!question}
+        />
+      )}
+      {question && (
+        <>
+          <Player
+            autoplay
+            loop
+            src={`${API_BASE_URL}/lottie/${question[8].lottie}`}
+            style={{ height: "150px", width: "150px" }}
+          />
+          <p>{question[3].quest}</p>
+          <div className="buttonAnswerContainer">
+            {question[3].answers.map((answer) => (
               <button type="submit" className="answerButton">
                 {answer}
               </button>
-            ))
-        }
-      </div>
-      <div className="buttonResetContainer">
-        <button type="button" className="resetButton">
-          Reset
-        </button>
-      </div>
+            ))}
+          </div>
+          <div className="buttonResetContainer">
+            <button type="button" className="resetButton">
+              Reset
+            </button>
+          </div>
+        </>
+      )}
     </>
   );
 }

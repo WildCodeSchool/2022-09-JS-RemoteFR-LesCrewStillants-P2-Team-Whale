@@ -1,8 +1,10 @@
 import axios from "axios";
 
+import { API_BASE_URL } from "./AppConfig";
+
 //Create a new axios instance
 const service = axios.create({
-  baseURL: "https://api.quizverse.space", //API url
+  baseURL: API_BASE_URL, //API url
 });
 
 //export service
