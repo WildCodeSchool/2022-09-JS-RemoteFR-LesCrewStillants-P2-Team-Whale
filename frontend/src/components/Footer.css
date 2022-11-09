@@ -7,7 +7,7 @@
   width: 100%;
   height: auto;
   font-family: "Open Sans", sans-serif;
-  color: white;
+  color: #fefefe;
 }
 
 .Imageplanets {
@@ -15,10 +15,12 @@
   height: auto;
   width: 50vh;
   justify-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #fefefe, -5px -5px 10px #fefefe;
 }
 
 .titleR {
-  color: white;
+  color: #fefefe;
   font-size: 20px;
 }
 
@@ -34,11 +36,11 @@
 }
 
 .bas .QV {
-  width: 50vh;
+  width: 60vh;
 }
 
 .liens {
-  color: white;
+  color: #fefefe;
 }
 
 .reseaux {
@@ -65,6 +67,7 @@
 
   .Imageplanets {
     width: 100%;
+    box-shadow: none;
   }
 
   .titleR {
