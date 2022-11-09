@@ -30,21 +30,15 @@ export default function QuizQuestion() {
       />
       <p>
         {!question && <div>Chargment</div>}
-        {question && question[0].quest}
+        {question && question[3].quest}
       </p>
       <div className="buttonAnswerContainer">
-        <button type="submit" className="answerButton">
-          Rouge
-        </button>
-        <button type="button" className="answerButton">
-          Blanc
-        </button>
-        <button type="button" className="answerButton">
-          Bleu
-        </button>
-        <button type="button" className="answerButton">
-          Jaune
-        </button>
+        {
+          // I'm using the map function to display the answers
+          question && question[3].answers.map((answer) => (
+            <button className="answerButton">{answer}</button>
+          ))
+        }
       </div>
       <div className="buttonResetContainer">
         <button type="button" className="resetButton">
