@@ -16,7 +16,7 @@ scoreService.getAllHard = () => {
   return api("/scores/hard", {
     //Route is /scores/hard
     method: "GET",
-  }).then((res) => res); //Return response
+  }).then((res) => res.data); //Return response
 };
 
 //export scoreService

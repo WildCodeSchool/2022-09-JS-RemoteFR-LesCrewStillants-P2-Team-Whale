@@ -8,7 +8,7 @@ questionService.getAll = () => {
   return api("/questions", {
     //Route is /questions
     method: "GET",
-  }).then((res) => res); //Return response
+  }).then((res) => res.data); //Return response
 };
 
 //export questionService
