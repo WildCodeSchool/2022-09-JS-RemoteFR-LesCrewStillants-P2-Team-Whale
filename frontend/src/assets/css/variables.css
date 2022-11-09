@@ -36,4 +36,16 @@
   --titleOneColor: aliceblue;
   --paragraphErrorColor: aliceblue;
   --textButtonErrorColor: aliceblue;
+
+  /*----------------------------------*/
+  /* Variables QuizQuestion component */
+  /*----------------------------------*/
+  --buttonAnswerBackgroundColor: aliceblue;
+  --buttonAnswerHoverBackgroundColor: #f72585;
+  --buttonAnswerHoverTextColor: aliceblue;
+  --buttonResetBackgroundColor: #f72585;
+  --textButtonResetColor: aliceblue;
+  --buttonResetBoxShadow: 0px 4px 4px aliceblue;
+  --buttonResetHoverBackgroundColor: #cc1e6f;
+  --buttonResetActiveBoxShadow: 0px 0px 0px aliceblue;
 }
