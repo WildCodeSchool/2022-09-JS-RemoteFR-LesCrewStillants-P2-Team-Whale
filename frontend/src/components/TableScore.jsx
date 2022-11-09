@@ -1,10 +1,10 @@
 import { Tab } from "@headlessui/react";
 import "./TableScore.css";
 import TableDifficult from "@components/TableDifficult";
-import EasyTable from "@components/TableEasy";
+import TableEasy from "@components/TableEasy";
 import { useState } from "react";
 
-export default function MyTabs() {
+export default function TableScore() {
   const [isEasyActive, setIsEasyActive] = useState(true);
   const [isDifficultActive, setIsDifficultActive] = useState(false);
 
@@ -36,7 +36,7 @@ export default function MyTabs() {
       </Tab.List>
       <Tab.Panels className="tablescores">
         <Tab.Panel>
-          <EasyTable />
+          <TableEasy />
         </Tab.Panel>
         <Tab.Panel>
           <TableDifficult />
