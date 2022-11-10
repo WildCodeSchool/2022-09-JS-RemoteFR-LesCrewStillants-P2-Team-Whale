@@ -5,7 +5,6 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import scoreDifficult from "@components/scoreDifficult";
 import { useEffect, useState } from "react";
 import ScoreService from "@services/ScoreService";
 
@@ -23,7 +22,7 @@ export default function TableDifficult() {
         <TableBody>
           {!score && <div>Chargement</div>}
           {score &&
-            score.slice(0,5).map((row) => (
+            score.slice(0, 5).map((row) => (
               <TableRow
                 key={row.userId}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
