@@ -22,7 +22,7 @@ export default function TableEasy() {
         <TableBody>
           {!score && <div>Chargement</div>}
           {score &&
-            score.map((row) => (
+            score.slice(0,5).map((row) => (
               <TableRow
                 key={row.userId}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
