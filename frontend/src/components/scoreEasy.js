@@ -1,4 +1,4 @@
-const scoreGames = [
+const scoreEasy = [
   {
     id: 1,
     pseudo: "Mathieu",
@@ -26,4 +26,4 @@ const scoreGames = [
   },
 ];
 
-export default scoreGames;
+export default scoreEasy;

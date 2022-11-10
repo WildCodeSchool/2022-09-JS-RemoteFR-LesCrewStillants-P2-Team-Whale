@@ -1,5 +1,5 @@
 body {
-  background-color: #FEFEFE;
+  background-color: #fefefe;
 }
 
 h1 {
@@ -90,8 +90,8 @@ h2 {
 
   h1 {
     font-size: 2rem;
-    padding-left : 1vh;
-    padding-right : 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
     text-align: center;
   }
 
