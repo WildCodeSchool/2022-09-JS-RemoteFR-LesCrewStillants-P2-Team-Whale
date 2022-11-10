@@ -1,8 +1,7 @@
 import { Player } from "@lottiefiles/react-lottie-player";
-import { PacmanLoader } from "react-spinners";
 import { useState, useEffect } from "react";
 import questionService from "@services/QuestionService";
-import { API_BASE_URL } from "../../auth/AppConfig";
+import { API_BASE_URL } from "../../axios/AppConfig";
 import "@assets/css/QuizQuestion.css";
 
 export default function QuizQuestion() {
@@ -16,14 +15,7 @@ export default function QuizQuestion() {
 
   return (
     <>
-      {!question && (
-        <PacmanLoader
-          className="pacMan"
-          size={25}
-          color="#ffffff"
-          loading={!question}
-        />
-      )}
+      {!question && <div>loading...</div>}
       {question && (
         <>
           <Player

@@ -1,4 +1,4 @@
-import api from "./../auth/FetchInterceptor";
+import api from "./../axios/FetchInterceptor";
 
 //insert question
 const questionService = {};
