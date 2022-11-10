@@ -19,5 +19,4 @@ scoreService.getAllHard = () => {
   }).then((res) => res.data); //Return response
 };
 
-//export scoreService
 export default scoreService;

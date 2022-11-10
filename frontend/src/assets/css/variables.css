@@ -71,13 +71,13 @@
   --textButtonScoreColor: aliceblue;
 
   /*-------------------------------*/
-  /* Variables QuizScore component */
+  /* Variables QuizAnswer component */
   /*-------------------------------*/
   /* Button variables */
   --buttonAnswerActiveBoxShadow: 0px 0px 0px aliceblue;
   --buttonAnswerHoverBackgroundColor: #cc1e6f;
   --buttonAnswerBoxShadow: 0px 4px 4px aliceblue;
-  --buttonAnswerBackgroundColor: #f72585;
+  --buttonAnswerBackgroundColor: aliceblue;
   /* Text variables */
   --textButtonAnswerColor: aliceblue;
 }

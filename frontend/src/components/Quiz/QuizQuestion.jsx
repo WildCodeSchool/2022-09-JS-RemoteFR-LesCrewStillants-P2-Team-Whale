@@ -4,14 +4,20 @@ import questionService from "@services/QuestionService";
 import { API_BASE_URL } from "../../axios/AppConfig";
 import "@assets/css/QuizQuestion.css";
 
-export default function QuizQuestion() {
+export default function QuizQuestion({ difficulty }) {
   const [question, setQuestion] = useState(undefined);
 
   useEffect(() => {
-    questionService.getAll().then((data) => {
-      setQuestion(data);
-    });
-  }, []);
+    if (difficulty === "easy") {
+      questionService.getEsyQuestions().then((response) => {
+        setQuestion(response);
+      });
+    } else if (difficulty === "hard") {
+      questionService.getHardQuestions().then((response) => {
+        setQuestion(response);
+      });
+    }
+  }, [difficulty]);
 
   return (
     <>
@@ -21,12 +27,12 @@ export default function QuizQuestion() {
           <Player
             autoplay
             loop
-            src={`${API_BASE_URL}/lottie/${question[8].lottie}`}
+            src={`${API_BASE_URL}/lottie/${question[1].lottie}`}
             style={{ height: "150px", width: "150px" }}
           />
-          <p>{question[3].quest}</p>
+          <p>{question[1].quest}</p>
           <div className="buttonAnswerContainer">
-            {question[3].answers.map((answer) => (
+            {question[1].answers.map((answer) => (
               <button type="submit" className="answerButton">
                 {answer}
               </button>
