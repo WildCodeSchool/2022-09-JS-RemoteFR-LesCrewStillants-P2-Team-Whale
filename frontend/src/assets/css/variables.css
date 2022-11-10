@@ -62,6 +62,22 @@
   --buttonSubmitHoverBackgroundColor: #cc1e6f;
   --buttonSubmitBoxShadow: 0px 4px 4px aliceblue;
   --buttonSubmitBackgroundColor: #f72585;
+  --buttonScoreActiveBoxShadow: 0px 0px 0px aliceblue;
+  --buttonScoreHoverBackgroundColor: #cc1e6f;
+  --buttonScoreBoxShadow: 0px 4px 4px aliceblue;
+  --buttonScoreBackgroundColor: #f72585;
   /* Text variables */
   --textButtonSubmitColor: aliceblue;
+  --textButtonScoreColor: aliceblue;
+
+  /*-------------------------------*/
+  /* Variables QuizScore component */
+  /*-------------------------------*/
+  /* Button variables */
+  --buttonAnswerActiveBoxShadow: 0px 0px 0px aliceblue;
+  --buttonAnswerHoverBackgroundColor: #cc1e6f;
+  --buttonAnswerBoxShadow: 0px 4px 4px aliceblue;
+  --buttonAnswerBackgroundColor: #f72585;
+  /* Text variables */
+  --textButtonAnswerColor: aliceblue;
 }
