@@ -8,15 +8,19 @@
   --backgroundContainerQuizColor: #0d1b2a;
   --backgroundContainerQuizBoxShadow: inset 0px 4px 4px rgba(72, 12, 168, 0.8);
   --backgroundBorderContainerQuiz: 2px solid aliceblue;
+  --borderRadiusContainerQuiz: 2%;
   /* Button variables */
   --buttonQuizBackgroundColor: #f72585;
   --buttonQuizHoverBackgroundColor: #cc1e6f;
   --buttonQuizBoxShadow: 0px 4px 4px aliceblue;
   --buttonQuizActiveBoxShadow: 0px 0px 0px aliceblue;
+  --buttonQuizBorderRadius: 10%;
+  --buttonQuizTextSize: 1rem;
   /* Text variables */
   --titleOneColor: aliceblue;
   --paragraphQuizColor: aliceblue;
   --textButtonQuizColor: aliceblue;
+  --paragrapheQuizSize: 1.5rem;
 
   /*-----------------------------*/
   /* Variables error page */
@@ -74,10 +78,10 @@
   /* Variables QuizAnswer component */
   /*-------------------------------*/
   /* Button variables */
-  --buttonAnswerActiveBoxShadow: 0px 0px 0px aliceblue;
-  --buttonAnswerHoverBackgroundColor: #cc1e6f;
-  --buttonAnswerBoxShadow: 0px 4px 4px aliceblue;
-  --buttonAnswerBackgroundColor: aliceblue;
+  --buttonNextActiveBoxShadow: 0px 0px 0px aliceblue;
+  --buttonNextHoverBackgroundColor: #cc1e6f;
+  --buttonNextBoxShadow: 0px 4px 4px aliceblue;
+  --buttonNextBackgroundColor: #f72585;
   /* Text variables */
-  --textButtonAnswerColor: aliceblue;
+  --textButtonNextColor: aliceblue;
 }

@@ -1,6 +1,6 @@
 @import "@assets/css/variables.css";
 
-.buttonAnswerContainer {
+.buttonNextContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,26 +8,26 @@
 }
 
 /* Button style */
-.buttonAnswer {
-  background-color: var(--buttonAnswerBackgroundColor);
+.buttonNext {
+  background-color: var(--buttonNextBackgroundColor);
   border: none;
-  color: var(--textButtonAnswerColor);
+  color: var(--textButtonNextColor);
   padding: 16px 32px;
   text-align: center;
   font-size: 16px;
   margin: 20px 15px;
   cursor: pointer;
-  box-shadow: var(--buttonAnswerBoxShadow);
+  box-shadow: var(--buttonNextBoxShadow);
   border-radius: 15px;
 }
 
 /* Button hover style */
-.buttonAnswer:hover {
-  background-color: var(--buttonAnswerHoverBackgroundColor);
+.buttonNext:hover {
+  background-color: var(--buttonNextHoverBackgroundColor);
 }
 
-.buttonAnswer:active {
-  box-shadow: var(--buttonAnswerActiveBoxShadow);
+.buttonNext:active {
+  box-shadow: var(--buttonNextActiveBoxShadow);
   transform: translateY(4px);
 }
 
