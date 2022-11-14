@@ -8,20 +8,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  max-width: 80vw;
+  max-width: 100vw;
 }
 
 /* Button answer style */
 .answerButton {
   word-wrap: break-word;
   width: 100%;
-  min-height: 50px;
-  border-radius: 5px;
-  border: 1px solid #000;
+  min-height: 3.12rem;
+  border-radius: var(--buttonAnswerBorderRadius);
+  border: var(--buttonAnswerBorder);
   background-color: var(--buttonAnswerBackgroundColor);
-  color: #000;
-  font-size: 20px;
+  color: var(--buttonAnswertextColor);
+  font-size: var(--buttonAnswerTextSize);
   font-weight: 600;
   margin-bottom: 10px;
   cursor: pointer;
@@ -38,8 +37,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  max-width: 80vw;
 }
 
 /* Button reset style */
@@ -47,13 +44,13 @@
   background-color: var(--buttonResetBackgroundColor);
   border: none;
   color: var(--textButtonResetColor);
-  padding: 16px 32px;
+  padding: var(--buttonResetPadding);
   text-align: center;
-  font-size: 16px;
-  margin: 20px 15px;
+  font-size: var(--buttonResetTextSize);
+  margin: 5%;
   cursor: pointer;
   box-shadow: var(--buttonResetBoxShadow);
-  border-radius: 15px;
+  border-radius: var(--buttonResetBorderRadius);
 }
 
 /* Button reset hover style */
@@ -80,10 +77,5 @@
   /* Button answer style */
   .answerButton {
     width: 45%;
-  }
-
-  .pacMan {
-    justify-content: center;
-    align-items: center;
   }
 }

@@ -27,12 +27,12 @@ body {
 .quizContainer {
   background-color: var(--backgroundContainerQuizColor);
   width: auto;
-  padding: 30px;
-  margin: 20px;
+  padding: 2%;
+  margin: 1%;
   box-sizing: border-box;
   border: var(--backgroundBorderContainerQuiz);
   box-shadow: var(--backgroundContainerQuizBoxShadow);
-  border-radius: 20px;
+  border-radius: var(--borderRadiusContainerQuiz);
 }
 
 /* Quiz container title (h1) text style */
@@ -45,7 +45,7 @@ body {
 .quizContainer p {
   color: var(--paragraphQuizColor);
   text-align: center;
-  font-size: 20px;
+  font-size: var(--paragrapheQuizSize);
 }
 
 /* Buttons
@@ -62,13 +62,13 @@ body {
   background-color: var(--buttonQuizBackgroundColor);
   border: none;
   color: var(--textButtonQuizColor);
-  padding: 16px 32px;
+  padding: var(--buttonQuizPadding);
   text-align: center;
-  font-size: 16px;
-  margin: 20px 15px;
+  font-size: var(--buttonQuizTextSize);
+  margin: 5% auto;
   cursor: pointer;
   box-shadow: var(--buttonQuizBoxShadow);
-  border-radius: 15px;
+  border-radius: var(--buttonQuizBorderRadius);
 }
 
 /* Button hover style */
@@ -106,7 +106,7 @@ body {
   .quizContainer p {
     color: var(--paragraphQuizColor);
     text-align: center;
-    font-size: 30px;
+    font-size: var(--paragrapheQuizSize);
   }
 
   /* Buttons
@@ -123,15 +123,13 @@ body {
     background-color: var(--buttonQuizBackgroundColor);
     border: none;
     color: var(--textButtonQuizColor);
-    padding: 16px 32px;
+    padding: var(--buttonQuizPadding);
     text-align: center;
-    font-size: 16px;
-    margin: 20px 15px;
+    font-size: var(--buttonQuizTextSize);
+    margin: 5%;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: var(--buttonQuizBorderRadius);
     text-align: center;
-    height: 100px;
-    width: 150px;
   }
 
   /* Lottie animation

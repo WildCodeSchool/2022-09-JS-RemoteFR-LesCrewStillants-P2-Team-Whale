@@ -19,8 +19,8 @@ export default function QuizAnswer() {
       <p className="answer">Jupiter</p>
       <p>La bonne réponse est:</p>
       <p className="answer">Mars</p>
-      <div className="buttonAnswerContainer">
-        <button type="submit" className="buttonAnswer">
+      <div className="buttonNextContainer">
+        <button type="submit" className="buttonNext">
           Next
         </button>
       </div>

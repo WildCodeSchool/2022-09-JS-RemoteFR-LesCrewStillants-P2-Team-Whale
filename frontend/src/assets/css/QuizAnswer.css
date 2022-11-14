@@ -1,6 +1,6 @@
 @import "@assets/css/variables.css";
 
-.buttonAnswerContainer {
+.buttonNextContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,31 +8,31 @@
 }
 
 /* Button style */
-.buttonAnswer {
-  background-color: var(--buttonAnswerBackgroundColor);
+.buttonNext {
+  background-color: var(--buttonNextBackgroundColor);
   border: none;
-  color: var(--textButtonAnswerColor);
-  padding: 16px 32px;
+  color: var(--textButtonNextColor);
+  padding: var(--buttonNextPadding);
   text-align: center;
-  font-size: 16px;
-  margin: 20px 15px;
+  font-size: var(--buttonNextTextSize);
+  margin: 5%;
   cursor: pointer;
-  box-shadow: var(--buttonAnswerBoxShadow);
-  border-radius: 15px;
+  box-shadow: var(--buttonNextBoxShadow);
+  border-radius: var(--buttonNextBorderRadius);
 }
 
 /* Button hover style */
-.buttonAnswer:hover {
-  background-color: var(--buttonAnswerHoverBackgroundColor);
+.buttonNext:hover {
+  background-color: var(--buttonNextHoverBackgroundColor);
 }
 
-.buttonAnswer:active {
-  box-shadow: var(--buttonAnswerActiveBoxShadow);
+.buttonNext:active {
+  box-shadow: var(--buttonNextActiveBoxShadow);
   transform: translateY(4px);
 }
 
 .answer {
-  font-size: 20px;
+  font-size: var(--textAnswerSize);
   font-weight: bold;
-  margin: 20px 15px;
+  margin: 125% 93, 75%;
 }
