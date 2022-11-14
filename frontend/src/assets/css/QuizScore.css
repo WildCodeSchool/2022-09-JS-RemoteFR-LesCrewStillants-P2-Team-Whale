@@ -12,13 +12,13 @@
   background-color: var(--buttonScoreBackgroundColor);
   border: none;
   color: var(--textButtonScoreColor);
-  padding: 16px 32px;
+  padding: var(--buttonScorePadding);
   text-align: center;
-  font-size: 16px;
-  margin: 20px 15px;
+  font-size: var(--buttonScoreTextSize);
+  margin: 5%;
   cursor: pointer;
   box-shadow: var(--buttonScoreBoxShadow);
-  border-radius: 15px;
+  border-radius: var(--buttonScoreBorderRadius);
 }
 
 /* Button hover style */
@@ -35,13 +35,13 @@
   background-color: var(--buttonSubmitBackgroundColor);
   border: none;
   color: var(--textButtonSubmitColor);
-  padding: 16px 32px;
+  padding: var(--buttonSubmitPadding);
   text-align: center;
-  font-size: 16px;
-  margin: 20px 15px;
+  font-size: var(--buttonSubmitTextSiz);
+  margin: 5%;
   cursor: pointer;
   box-shadow: var(--buttonSubmitBoxShadow);
-  border-radius: 15px;
+  border-radius: var(--buttonSubmitBorderRadius);
 }
 
 .buttonSubmit:hover {
@@ -54,15 +54,15 @@
 }
 
 .score {
-  font-size: 20px;
+  font-size: var(--textScoreSize);
   font-weight: bold;
-  margin: 20px 15px;
+  margin: 5%;
 }
 
 .inputName {
-  font-size: 20px;
+  font-size: var(--inputTextSize);
   font-weight: bold;
-  margin: 20px 15px;
+  margin: 5% 0, 5%;
   border: none;
   border-bottom: 1px solid var(--textButtonQuizColor);
   background-color: var(--inputNameBackgroundColor);

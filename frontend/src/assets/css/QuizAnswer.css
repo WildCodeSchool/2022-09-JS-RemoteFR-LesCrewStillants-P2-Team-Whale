@@ -12,13 +12,13 @@
   background-color: var(--buttonNextBackgroundColor);
   border: none;
   color: var(--textButtonNextColor);
-  padding: 16px 32px;
+  padding: var(--buttonNextPadding);
   text-align: center;
-  font-size: 16px;
-  margin: 20px 15px;
+  font-size: var(--buttonNextTextSize);
+  margin: 5%;
   cursor: pointer;
   box-shadow: var(--buttonNextBoxShadow);
-  border-radius: 15px;
+  border-radius: var(--buttonNextBorderRadius);
 }
 
 /* Button hover style */
@@ -32,7 +32,7 @@
 }
 
 .answer {
-  font-size: 20px;
+  font-size: var(--textAnswerSize);
   font-weight: bold;
-  margin: 20px 15px;
+  margin: 125% 93, 75%;
 }
