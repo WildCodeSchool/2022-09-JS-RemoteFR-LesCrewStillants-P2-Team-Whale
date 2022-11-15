@@ -20,7 +20,7 @@ export default function QuizStart() {
             style={{ height: "300px", width: "300px" }}
           />
           <p>Hello aventurier de l'espace</p>
-          <p>Choisissez votre difficultée</p>
+          <p>Choisissez votre difficulté</p>
           <div className="buttonContainer">
             <button
               onClick={() => setDifficulty("easy")}
