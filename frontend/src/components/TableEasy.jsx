@@ -18,7 +18,7 @@ export default function TableEasy() {
   }, []);
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: 460 }} aria-label="simple table">
         <TableBody>
           {!score && <div>Chargement</div>}
           {score &&
