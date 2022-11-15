@@ -1,13 +1,14 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useState, useEffect } from "react";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import questionService from "@services/QuestionService";
 import { API_BASE_URL } from "../../axios/AppConfig";
 import "@assets/css/QuizQuestion.css";
 
 export default function QuizQuestion({ difficulty }) {
   const [question, setQuestion] = useState(undefined);
-  const [count, setCount] = useState(0);
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (difficulty === "easy") {
@@ -22,10 +23,10 @@ export default function QuizQuestion({ difficulty }) {
   }, [difficulty]);
 
   const handleClick = () => {
-    if (count < 9) {
-      setCount(count + 1);
+    if (questionIndex + 1 < 10) {
+      setQuestionIndex(questionIndex + 1);
     } else {
-      redirect("/quiz/scoresdds");
+      navigate("/quiz/score");
     }
   };
 
@@ -37,12 +38,12 @@ export default function QuizQuestion({ difficulty }) {
           <Player
             autoplay
             loop
-            src={`${API_BASE_URL}/lottie/${question[count].lottie}`}
+            src={`${API_BASE_URL}/lottie/${question[questionIndex].lottie}`}
             style={{ height: "150px", width: "150px" }}
           />
-          <p>{question[count].quest}</p>
+          <p>{question[questionIndex].quest}</p>
           <div className="buttonAnswerContainer">
-            {question[count].answers.map((answer) => (
+            {question[questionIndex].answers.map((answer) => (
               <button
                 key={answer}
                 type="submit"
@@ -57,7 +58,7 @@ export default function QuizQuestion({ difficulty }) {
             <button type="button" className="resetButton">
               Reset
             </button>
-            <p>{count + 1}/10</p>
+            <p>{questionIndex + 1}/10</p>
           </div>
         </>
       )}

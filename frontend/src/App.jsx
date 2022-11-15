@@ -6,7 +6,7 @@ import "./App.css";
 
 const Home = React.lazy(() => import("@pages/Home"));
 const Quiz = React.lazy(() => import("@pages/Quiz"));
-const Score = React.lazy(() => import("@pages/QuizScorec"));
+const Score = React.lazy(() => import("@pages/QuizScore"));
 const Error = React.lazy(() => import("@pages/Error"));
 const Contact = React.lazy(() => import("@pages/Contact"));
 
