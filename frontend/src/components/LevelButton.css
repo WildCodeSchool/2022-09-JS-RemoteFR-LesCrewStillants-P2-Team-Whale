@@ -4,7 +4,7 @@
 }
 
 .btn-game {
-  background-color: #f72585;
+  background-color: #cc1e6f;
   border-radius: 10px;
   border-color: #ffffff;
   width: 38vh;
@@ -13,5 +13,5 @@
 
 button .text {
   font-size: 3vh;
-  color: #fff;
+  color: #fefefe;
 }

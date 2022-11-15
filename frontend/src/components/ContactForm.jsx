@@ -7,14 +7,14 @@ function ContactForm() {
   const [status, setStatus] = useState("Submit");
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus("HI...");
     const { name, email, message } = e.target.elements;
     const details = {
       name: name.value,
       email: email.value,
       message: message.value,
     };
-    const response = await fetch("http://localhost:3001/contact", {
+    const response = await fetch("http://localhost:3000/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

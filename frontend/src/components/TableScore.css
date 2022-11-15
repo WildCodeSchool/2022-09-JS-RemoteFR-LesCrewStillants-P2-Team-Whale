@@ -6,31 +6,32 @@
 }
 
 .level {
-  background-color: #000000;
+  background-color: #fefefe;
   border: none;
   height: 5vh;
   width: 25vh;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color:black;
 }
 
 .levelisActive {
-  background-color: #f72585;
+  background: #f72585;
   border: none;
   height: 6vh;
   width: 25vh;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: rgb(255, 255, 255);
   border-radius: 10px;
 }
 
 .level :active {
-  background-color: #fff;
+  background-color: rgb(47, 198, 41);
   color: #000000;
 }
 
 .tablescores {
   margin-top: 5vh;
+
 }

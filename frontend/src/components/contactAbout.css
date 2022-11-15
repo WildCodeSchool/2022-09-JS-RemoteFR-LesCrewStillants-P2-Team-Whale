@@ -1,7 +1,7 @@
 .containerUs .contactUs {
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 5px 10px #eb227e, -5px -5px 10px #ff268c;
+  box-shadow: 5px 5px 10px #f4c8dc, -5px -5px 10px #f4c8dc;
   border-radius: 40px;
   font-family: "Open Sans";
   color: #fefefe;

@@ -3,8 +3,9 @@
   flex-direction: column;
   align-items: center;
   margin: 0;
-  background-color: #0d1b2a;
-  width: 100%;
+  background: 
+  #0D1B2A;
+    width: 100%;
   height: auto;
   font-family: "Open Sans", sans-serif;
   color: #fefefe;
@@ -21,7 +22,8 @@
 
 .titleR {
   color: #fefefe;
-  font-size: 20px;
+  font-size: 1.1em;
+  text-align: center;
 }
 
 .bas {
@@ -44,16 +46,24 @@
 }
 
 .reseaux {
-  padding: 5px;
+  display: flex;
+  flex-direction:column;
+  padding-bottom: 3%;
   justify-content: center;
 }
 
 .img {
-  padding: 5px;
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.img-logo{
+  display: flex;
+  flex-direction: row;
 }
 
 .contactUs {
-  padding: 10px;
+  padding: 2%;
 }
 
 /* VERSION MOBILE */
