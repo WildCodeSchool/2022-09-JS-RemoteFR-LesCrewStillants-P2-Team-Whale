@@ -6,7 +6,7 @@ import { API_BASE_URL } from "../../axios/AppConfig";
 import "@assets/css/QuizQuestion.css";
 
 export default function QuizQuestion({ difficulty }) {
-  const [question, setQuestion] = useState(0);
+  const [question, setQuestion] = useState(undefined);
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function QuizQuestion({ difficulty }) {
     if (count < 9) {
       setCount(count + 1);
     } else {
-      redirect("quizscore");
+      redirect("/quiz/scoresdds");
     }
   };
 
@@ -44,6 +44,7 @@ export default function QuizQuestion({ difficulty }) {
           <div className="buttonAnswerContainer">
             {question[count].answers.map((answer) => (
               <button
+                key={answer}
                 type="submit"
                 onClick={handleClick}
                 className="answerButton"
