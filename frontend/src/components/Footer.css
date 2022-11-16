@@ -3,9 +3,8 @@
   flex-direction: column;
   align-items: center;
   margin: 0;
-  background: 
-  #0D1B2A;
-    width: 100%;
+  background: #0d1b2a;
+  width: 100%;
   height: auto;
   font-family: "Open Sans", sans-serif;
   color: #fefefe;
@@ -47,17 +46,17 @@
 
 .reseaux {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   padding-bottom: 3%;
   justify-content: center;
 }
 
 .img {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
 
-.img-logo{
+.img-logo {
   display: flex;
   flex-direction: row;
 }
