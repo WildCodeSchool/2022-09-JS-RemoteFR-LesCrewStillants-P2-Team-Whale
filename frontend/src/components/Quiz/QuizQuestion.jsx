@@ -8,7 +8,6 @@ import axios from "axios";
 import { API_BASE_URL } from "../../axios/AppConfig";
 import "@assets/css/QuizQuestion.css";
 
-
 export default function QuizQuestion({ difficulty }) {
   const [question, setQuestion] = useState(undefined);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -16,27 +15,21 @@ export default function QuizQuestion({ difficulty }) {
   const [name, setName] = useState("");
   const [score, setScore] = useState(0);
 
+  // add commentaire
+
   async function addScoreEasy() {
-    let user = {
+    const user = {
       name,
       score,
     };
     if (difficulty !== "easy") {
-      const response = await axios.post(
-        "https://api.quizverse.space/scores/hard",
-        user
-      );
+      await axios.post("https://api.quizverse.space/scores/hard", user);
     } else {
-      const response = await axios.post(
-        "https://api.quizverse.space/scores/easy",
-        user)
+      await axios.post("https://api.quizverse.space/scores/easy", user);
     }
   }
 
-  const notifySubmit = () =>
-    toast(
-      `Votre score a bien été enregistré`
-    );
+  const notifySubmit = () => toast(`Votre score a bien été enregistré`);
 
   const notify = (isCorrect, desc) => {
     if (isCorrect) {
@@ -104,6 +97,7 @@ export default function QuizQuestion({ difficulty }) {
   };
 
   return (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {ShowResult ? (
         <>
@@ -118,9 +112,21 @@ export default function QuizQuestion({ difficulty }) {
           <p className="score">Your score</p>
           <p className="score">{score} / 10</p>
           <p>Almost there !</p>
-          <input onChange={handleChange} className="inputName" type="text" placeholder="Your name" />
+          <input
+            onChange={handleChange}
+            className="inputName"
+            type="text"
+            placeholder="Your name"
+          />
           <div className="buttonScoreContainer">
-            <button type="submit" className="buttonSubmit" onClick={()=>{addScoreEasy();notifySubmit()}}>
+            <button
+              type="submit"
+              className="buttonSubmit"
+              onClick={() => {
+                addScoreEasy();
+                notifySubmit();
+              }}
+            >
               Submit
             </button>
             <ToastContainer />

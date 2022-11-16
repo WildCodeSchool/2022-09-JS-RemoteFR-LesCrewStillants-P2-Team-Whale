@@ -3,7 +3,8 @@ body {
     circle,
     rgba(2, 0, 36, 1) 0%,
     rgba(16, 30, 45, 1) 67%,
-    #a8a5be 100%)
+    #a8a5be 100%
+  );
 }
 
 h1 {
@@ -12,8 +13,7 @@ h1 {
   color: #fefefe;
   max-width: 127vh;
   padding-bottom: 4vh;
-
-;}
+}
 
 .quiz-header {
   background-image: url("@assets/header-quizz.png");
@@ -36,7 +36,7 @@ h1 {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   margin-bottom: 5vh;
-  background-color: #0D1B2A;
+  background-color: #0d1b2a;
 }
 
 h2 {
@@ -60,7 +60,7 @@ h2 {
   font-size: 2rem;
   text-align: center;
   font-weight: 600;
-  color:black;
+  color: black;
   margin-top: 2rem;
 }
 .project-content {
