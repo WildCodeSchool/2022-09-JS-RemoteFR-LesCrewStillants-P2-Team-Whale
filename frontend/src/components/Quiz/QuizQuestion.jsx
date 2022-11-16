@@ -2,8 +2,8 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { useState, useEffect } from "react";
 import questionService from "@services/QuestionService";
 import book from "@assets/lottie-file/book.json";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 import { API_BASE_URL } from "../../axios/AppConfig";
 import "@assets/css/QuizQuestion.css";
 
@@ -13,31 +13,42 @@ export default function QuizQuestion({ difficulty }) {
   const [ShowResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
 
-  const customMsg = (
-      <div>
-        <p id="answerText">La réponse est incorrecte !</p>
-        <p id="answerText">
-          La bonne réponse est : <b>test</b>
-        </p>
-        <p id="answerText">
-          La bonne réponse est: <b>test</b>
-        </p>
-        <br />
-        <p id="answerText">La terre est plate</p>
-      </div>
-  );
-
-  const notify = () => {
-    toast.error(customMsg, {
-      position: "bottom-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
+  const notify = (isCorrect, desc) => {
+    if (isCorrect) {
+      toast.success(
+        <div>
+          <p id="answerText">Bravo ! La réponse est correcte !</p>
+          <p id="answerText">{desc}</p>
+        </div>,
+        {
+          position: "bottom-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        }
+      );
+    } else {
+      toast.error(
+        <div>
+          <p id="answerText">Dommage ! La réponse est incorrecte !</p>
+          <p id="answerText">{desc}</p>
+        </div>,
+        {
+          position: "bottom-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        }
+      );
+    }
   };
 
   useEffect(() => {
@@ -104,13 +115,15 @@ export default function QuizQuestion({ difficulty }) {
                 {question[questionIndex].answers.map((answer) => (
                   <button
                     type="submit"
-                    className={
-                    "answerButton"
-                    }
+                    className="answerButton"
                     key={answer.id}
                     onClick={() => {
                       handleClick(answer.isCorrect);
-                      notify();
+                      notify(
+                        answer.isCorrect,
+                        question[questionIndex].description,
+                        answer.isCorrect
+                      );
                     }}
                   >
                     {answer.name}
