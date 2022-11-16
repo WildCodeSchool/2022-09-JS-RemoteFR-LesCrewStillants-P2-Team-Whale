@@ -4,10 +4,10 @@ import questionService from "@services/QuestionService";
 import book from "@assets/lottie-file/book.json";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
-import { API_BASE_URL } from "../../axios/AppConfig";
-import {useNavigate} from "react-router-dom";
-import "@assets/css/QuizQuestion.css";
 import axios from "axios";
+import { API_BASE_URL } from "../../axios/AppConfig";
+import "@assets/css/QuizQuestion.css";
+
 
 export default function QuizQuestion({ difficulty }) {
   const [question, setQuestion] = useState(undefined);
@@ -15,7 +15,6 @@ export default function QuizQuestion({ difficulty }) {
   const [ShowResult, setShowResult] = useState(false);
   const [name, setName] = useState("");
   const [score, setScore] = useState(0);
-  const navigate = useNavigate();
 
   async function addScoreEasy() {
     let user = {
@@ -33,6 +32,11 @@ export default function QuizQuestion({ difficulty }) {
         user)
     }
   }
+
+  const notifySubmit = () =>
+    toast(
+      `Votre score a bien été enregistré`
+    );
 
   const notify = (isCorrect, desc) => {
     if (isCorrect) {
@@ -116,9 +120,10 @@ export default function QuizQuestion({ difficulty }) {
           <p>Almost there !</p>
           <input onChange={handleChange} className="inputName" type="text" placeholder="Your name" />
           <div className="buttonScoreContainer">
-            <button type="submit" className="buttonSubmit" onClick={addScoreEasy}>
+            <button type="submit" className="buttonSubmit" onClick={()=>{addScoreEasy();notifySubmit()}}>
               Submit
             </button>
+            <ToastContainer />
             <button type="submit" className="buttonScore">
               Recommencer
             </button>

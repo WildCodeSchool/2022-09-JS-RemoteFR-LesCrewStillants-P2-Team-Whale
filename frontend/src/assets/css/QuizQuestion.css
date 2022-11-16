@@ -172,3 +172,8 @@
 #answerText {
   font-size: 0.9rem;
 }
+
+answerSubmit {
+  color: var(--buttonSubmitHoverBackgroundColor);
+  font-size: 0.9rem;
+}
