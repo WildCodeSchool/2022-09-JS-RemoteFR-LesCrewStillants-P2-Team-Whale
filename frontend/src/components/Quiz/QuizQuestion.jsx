@@ -2,6 +2,8 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { useState, useEffect } from "react";
 import questionService from "@services/QuestionService";
 import book from "@assets/lottie-file/book.json";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import { API_BASE_URL } from "../../axios/AppConfig";
 import "@assets/css/QuizQuestion.css";
 
@@ -10,7 +12,33 @@ export default function QuizQuestion({ difficulty }) {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [ShowResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(false);
+
+  const customMsg = (
+      <div>
+        <p id="answerText">La réponse est incorrecte !</p>
+        <p id="answerText">
+          La bonne réponse est : <b>test</b>
+        </p>
+        <p id="answerText">
+          La bonne réponse est: <b>test</b>
+        </p>
+        <br />
+        <p id="answerText">La terre est plate</p>
+      </div>
+  );
+
+  const notify = () => {
+    toast.error(customMsg, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
 
   useEffect(() => {
     if (difficulty === "easy") {
@@ -24,12 +52,8 @@ export default function QuizQuestion({ difficulty }) {
     }
   }, [difficulty]);
 
-  const handleAnswer = () => {
-    setSelectedAnswer(true);
-  };
-
-  const handleClick = (correctAnswer) => {
-    if (correctAnswer) {
+  const handleClick = (isCorrect) => {
+    if (isCorrect) {
       setScore(score + 1);
     }
     if (questionIndex + 1 < 10) {
@@ -79,24 +103,23 @@ export default function QuizQuestion({ difficulty }) {
               <div className="buttonAnswerContainer">
                 {question[questionIndex].answers.map((answer) => (
                   <button
-                    key={answer}
                     type="submit"
-                    onClick={handleAnswer}
                     className={
-                      selectedAnswer ? "answerButtonSelected" : "answerButton"
+                    "answerButton"
                     }
+                    key={answer.id}
+                    onClick={() => {
+                      handleClick(answer.isCorrect);
+                      notify();
+                    }}
                   >
-                    {answer}
+                    {answer.name}
                   </button>
                 ))}
               </div>
-              <div className="buttonResetContainer">
-                <button type="button" className="resetButton">
-                  Valider
-                </button>
-                <p>{questionIndex + 1}/10</p>
-                <p>Mon score : {score}</p>
-              </div>
+              <ToastContainer />
+              <p>{questionIndex + 1}/10</p>
+              <p>Mon score : {score}</p>
             </>
           )}
         </>

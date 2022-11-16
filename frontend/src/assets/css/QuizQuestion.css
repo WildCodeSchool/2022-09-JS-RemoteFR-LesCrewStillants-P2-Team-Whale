@@ -24,6 +24,7 @@
   font-weight: 600;
   margin-bottom: 10px;
   cursor: pointer;
+  list-style-type: none;
 }
 
 .answerButtonSelected {
@@ -38,6 +39,7 @@
   font-weight: 600;
   margin-bottom: 10px;
   cursor: pointer;
+  list-style-type: none;
 }
 
 /* Button answer hover style */
