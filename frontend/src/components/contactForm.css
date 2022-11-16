@@ -3,29 +3,51 @@
 }
 
 .container {
-  margin-top: 15vmin;
   display: flex;
-  white-space: pre-wrap;
   color: #fefefe;
-  font-size: 1.5em;
-  line-height: 40px;
-  margin-left: 30vmin;
+  margin-top: 10vmin;
+  line-height: 2.2em;
+  font-size: 1.3em;
+  margin-bottom: 10vmin;
 }
 
-.form-box {
+/* .form-box {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 17%;
+}
+ */
+.container input {
+  padding: 15px 50px;
+  border-radius: 4vmin;
+  box-shadow: 0px 4px 4px #f72585;
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  font-size: 1em;
 }
 
-input {
-  padding: 15px;
-  border-radius: 0.6vmin;
+.container textarea {
+  padding: 15px 50px;
+  border-radius: 4vmin;
+  box-shadow: 0px 4px 4px #f72585;
   line-height: 20px;
   display: flex;
   flex-wrap: wrap;
+  white-space: nowrap;
+  font-size: 1em;
 }
+
+/* .container .input-message input {
+  padding: 50px;
+  border-radius: 4vmin;
+  box-shadow: 0px 4px 4px #fefefe;
+  line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  white-space: pre-wrap;
+
+}  */
 
 .img-alien {
   display: flex;
@@ -34,39 +56,53 @@ input {
   position: relative;
 }
 
-button {
+.buttonSubmit {
   position: relative;
   width: 7em;
   height: 3.5em;
   background: #f72585;
-  box-shadow: 0px 4px 4px #ffffff;
+  box-shadow: 0px 2px 2px #fefefe;
   border-radius: 15px;
   color: white;
-  margin-top: 10px;
-  margin-left: 40px;
+  font-size: 1em;
+  margin-top: 10%;
 }
 
 @media screen and (max-width: 900px) {
-  input {
-    padding: 5px;
-    border-radius: 0.6vmin;
-    line-height: 10px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .container {
-    margin-top: 1vmin;
     display: flex;
     white-space: pre-wrap;
     color: #fefefe;
-    line-height: 20px;
+    align-items: center;
+    box-shadow: none;
+    padding: 10%;
+    margin-top: 0vmin;
   }
 
-  .form-box {
+  .container h1 {
+    white-space: nowrap;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .img-alien {
+    display: none;
+  }
+  /*   .form-box {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 0;
+    box-shadow: none;
+  } */
+
+  .container h1 {
+    white-space: nowrap;
   }
-}
+
+  .buttonSubmit {
+    background: #f72585;
+    box-shadow: none;
+    border-radius: 15px;
+    color: #fefefe;
+  }
+} ;

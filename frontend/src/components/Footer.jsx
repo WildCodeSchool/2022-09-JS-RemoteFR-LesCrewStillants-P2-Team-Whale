@@ -13,9 +13,11 @@ function Footer() {
       <div className="bas">
         <div className="reseaux">
           <h5 className="titleR">Follow Us </h5>
-          <img className="img" src={insta} alt="Logo_Instagramme" />
-          <img className="img" src={facebook} alt="Logo_FaceBook" />
-          <img className="img" src={twitter} alt="Logo_Twitter" />
+          <div className="img-logo">
+            <img className="img" src={insta} alt="Logo_Instagramme" />
+            <img className="img" src={facebook} alt="Logo_FaceBook" />
+            <img className="img" src={twitter} alt="Logo_Twitter" />
+          </div>
         </div>
 
         <img className="QV" src={QR} alt="Logo_QV" />

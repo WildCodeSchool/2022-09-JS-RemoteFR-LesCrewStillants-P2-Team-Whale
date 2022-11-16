@@ -41,5 +41,12 @@ if (fs.existsSync(reactIndexFile)) {
   });
 }
 
+/* app.post("/send", (req, res) => {
+  res.send(req.body);
+});
+
+app.listen(3030, () => {});
+ */
 // ready to export
+
 module.exports = app;

@@ -1,40 +1,58 @@
+import React, { useState } from "react";
 import planet from "@assets/planet.png";
 
 import "./ContactForm.css";
 
-export default function ContactForm() {
+function ContactForm() {
+  const [status, setStatus] = useState("Submit");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("HI...");
+    const { name, email, message } = e.target.elements;
+    const details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    const response = await fetch("http://localhost:3000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+    setStatus("Submit");
+    const result = await response.json();
+    // eslint-disable-next-line no-alert
+    alert(result.status);
+  };
+
   return (
     <div className="container">
-      <form className="form-box">
+      <form onSubmit={handleSubmit} className="form-box">
         <span>
-          <h1>Contactez Nous</h1>
+          <h1 className="title-contact">Contacter Nous</h1>
           <img className="img-alien" src={planet} alt="Visage_Alien" />
         </span>
 
         <div>
-          <span>Nom*</span>
-          <input type="text" placeholder="Enter your name" />
+          <label htmlFor="name">Nom</label>
+          <input type="text" id="name" required />
         </div>
         <div>
-          <span>Email*</span>
-          <input type="text" placeholder="example@email.com" />
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" required />
         </div>
         <div>
-          <span>Numéro*</span>
-          <input type="text" placeholder="06060606" />
-        </div>
-        <div>
-          <span>Sujet*</span>
-          <input type="text" placeholder="Best Quiz thank you" />
-        </div>
-        <div>
-          <span>Message*</span>
-          <input type="text" placeholder="Votre message ici" />
+          <label htmlFor="message">Message</label>
+          <textarea id="message" required />
         </div>
         <button type="submit" className="buttonSubmit">
-          Submit
+          {status}
         </button>
       </form>
     </div>
   );
 }
+
+export default ContactForm;
