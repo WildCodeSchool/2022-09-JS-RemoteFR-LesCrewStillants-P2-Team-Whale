@@ -26,6 +26,20 @@
   cursor: pointer;
 }
 
+.answerButtonSelected {
+  word-wrap: break-word;
+  width: 100%;
+  min-height: 3.12rem;
+  border-radius: var(--buttonAnswerBorderRadius);
+  border: var(--buttonAnswerBorder);
+  background-color: var(--buttonAnswerHoverBackgroundColor);
+  color: var(--buttonAnswerHoverTextColor);
+  font-size: var(--buttonAnswerTextSize);
+  font-weight: 600;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
 /* Button answer hover style */
 .answerButton:hover {
   background-color: var(--buttonAnswerHoverBackgroundColor);
@@ -76,6 +90,10 @@
 
   /* Button answer style */
   .answerButton {
+    width: 45%;
+  }
+
+  .answerButtonSelected {
     width: 45%;
   }
 }
