@@ -5,13 +5,34 @@ import book from "@assets/lottie-file/book.json";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { API_BASE_URL } from "../../axios/AppConfig";
+import {useNavigate} from "react-router-dom";
 import "@assets/css/QuizQuestion.css";
+import axios from "axios";
 
 export default function QuizQuestion({ difficulty }) {
   const [question, setQuestion] = useState(undefined);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [ShowResult, setShowResult] = useState(false);
+  const [name, setName] = useState("");
   const [score, setScore] = useState(0);
+  const navigate = useNavigate();
+
+  async function addScoreEasy() {
+    let user = {
+      name,
+      score,
+    };
+    if (difficulty !== "easy") {
+      const response = await axios.post(
+        "https://api.quizverse.space/scores/hard",
+        user
+      );
+    } else {
+      const response = await axios.post(
+        "https://api.quizverse.space/scores/easy",
+        user)
+    }
+  }
 
   const notify = (isCorrect, desc) => {
     if (isCorrect) {
@@ -74,6 +95,10 @@ export default function QuizQuestion({ difficulty }) {
     }
   };
 
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
+
   return (
     <>
       {ShowResult ? (
@@ -89,13 +114,13 @@ export default function QuizQuestion({ difficulty }) {
           <p className="score">Your score</p>
           <p className="score">{score} / 10</p>
           <p>Almost there !</p>
-          <input className="inputName" type="text" placeholder="Your name" />
+          <input onChange={handleChange} className="inputName" type="text" placeholder="Your name" />
           <div className="buttonScoreContainer">
-            <button type="submit" className="buttonSubmit">
+            <button type="submit" className="buttonSubmit" onClick={addScoreEasy}>
               Submit
             </button>
-            <button type="submit" className="buttonScore" onClick={handleClick}>
-              Accueil
+            <button type="submit" className="buttonScore">
+              Recommencer
             </button>
           </div>
         </>
@@ -137,7 +162,6 @@ export default function QuizQuestion({ difficulty }) {
           )}
         </>
       )}
-      )
     </>
   );
 }
