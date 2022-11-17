@@ -1,1 +1,1 @@
-export const API_BASE_URL = "https://api.quizverse.space";
+export const API_BASE_URL = "http://localhost:3080";

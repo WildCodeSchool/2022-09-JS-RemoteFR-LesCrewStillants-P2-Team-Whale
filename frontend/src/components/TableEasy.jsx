@@ -18,7 +18,7 @@ export default function TableEasy() {
   }, []);
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: 460 }} aria-label="simple table">
         <TableBody>
           {!score && <div>Chargement</div>}
           {score &&
@@ -28,7 +28,7 @@ export default function TableEasy() {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell align="center">{row.name}</TableCell>
-                <TableCell align="center">{row.score}</TableCell>
+                <TableCell>{row.score}</TableCell>
               </TableRow>
             ))}
         </TableBody>

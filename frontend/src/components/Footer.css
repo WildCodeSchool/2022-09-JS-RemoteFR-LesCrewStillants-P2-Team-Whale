@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: center;
   margin: 0;
-  background-color: #0d1b2a;
+  background: #0d1b2a;
   width: 100%;
   height: auto;
   font-family: "Open Sans", sans-serif;
-  color: white;
+  color: #fefefe;
 }
 
 .Imageplanets {
@@ -15,11 +15,14 @@
   height: auto;
   width: 50vh;
   justify-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #fefefe, -5px -5px 10px #fefefe;
 }
 
 .titleR {
-  color: white;
-  font-size: 20px;
+  color: #fefefe;
+  font-size: 1.1em;
+  text-align: center;
 }
 
 .bas {
@@ -34,24 +37,32 @@
 }
 
 .bas .QV {
-  width: 50vh;
+  width: 60vh;
 }
 
 .liens {
-  color: white;
+  color: #fefefe;
 }
 
 .reseaux {
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3%;
   justify-content: center;
 }
 
 .img {
-  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.img-logo {
+  display: flex;
+  flex-direction: row;
 }
 
 .contactUs {
-  padding: 10px;
+  padding: 2%;
 }
 
 /* VERSION MOBILE */
@@ -65,6 +76,7 @@
 
   .Imageplanets {
     width: 100%;
+    box-shadow: none;
   }
 
   .titleR {

@@ -8,23 +8,38 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  max-width: 80vw;
+  max-width: 100vw;
 }
 
 /* Button answer style */
 .answerButton {
   word-wrap: break-word;
   width: 100%;
-  min-height: 50px;
-  border-radius: 5px;
-  border: 1px solid #000;
+  min-height: 3.12rem;
+  border-radius: var(--buttonAnswerBorderRadius);
+  border: var(--buttonAnswerBorder);
   background-color: var(--buttonAnswerBackgroundColor);
-  color: #000;
-  font-size: 20px;
+  color: var(--buttonAnswertextColor);
+  font-size: var(--buttonAnswerTextSize);
   font-weight: 600;
   margin-bottom: 10px;
   cursor: pointer;
+  list-style-type: none;
+}
+
+.answerButtonSelected {
+  word-wrap: break-word;
+  width: 100%;
+  min-height: 3.12rem;
+  border-radius: var(--buttonAnswerBorderRadius);
+  border: var(--buttonAnswerBorder);
+  background-color: var(--buttonAnswerHoverBackgroundColor);
+  color: var(--buttonAnswerHoverTextColor);
+  font-size: var(--buttonAnswerTextSize);
+  font-weight: 600;
+  margin-bottom: 10px;
+  cursor: pointer;
+  list-style-type: none;
 }
 
 /* Button answer hover style */
@@ -38,8 +53,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  max-width: 80vw;
 }
 
 /* Button reset style */
@@ -47,13 +60,13 @@
   background-color: var(--buttonResetBackgroundColor);
   border: none;
   color: var(--textButtonResetColor);
-  padding: 16px 32px;
+  padding: var(--buttonResetPadding);
   text-align: center;
-  font-size: 16px;
-  margin: 20px 15px;
+  font-size: var(--buttonResetTextSize);
+  margin: 5%;
   cursor: pointer;
   box-shadow: var(--buttonResetBoxShadow);
-  border-radius: 15px;
+  border-radius: var(--buttonResetBorderRadius);
 }
 
 /* Button reset hover style */
@@ -65,6 +78,75 @@
 .resetButton:active {
   box-shadow: var(--buttonResetActiveBoxShadow);
   transform: translateY(4px);
+}
+
+.buttonScoreContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button style */
+.buttonScore {
+  background-color: var(--buttonScoreBackgroundColor);
+  border: none;
+  color: var(--textButtonScoreColor);
+  padding: var(--buttonScorePadding);
+  text-align: center;
+  font-size: var(--buttonScoreTextSize);
+  margin: 5%;
+  cursor: pointer;
+  box-shadow: var(--buttonScoreBoxShadow);
+  border-radius: var(--buttonScoreBorderRadius);
+}
+
+/* Button hover style */
+.buttonScore:hover {
+  background-color: var(--buttonScoreHoverBackgroundColor);
+}
+
+.buttonScore:active {
+  box-shadow: var(--buttonScoreActiveBoxShadow);
+  transform: translateY(4px);
+}
+
+.buttonSubmit {
+  background-color: var(--buttonSubmitBackgroundColor);
+  border: none;
+  color: var(--textButtonSubmitColor);
+  padding: var(--buttonSubmitPadding);
+  text-align: center;
+  font-size: var(--buttonSubmitTextSiz);
+  margin: 5%;
+  cursor: pointer;
+  box-shadow: var(--buttonSubmitBoxShadow);
+  border-radius: var(--buttonSubmitBorderRadius);
+}
+
+.buttonSubmit:hover {
+  background-color: var(--buttonSubmitHoverBackgroundColor);
+}
+
+.buttonSubmit:active {
+  box-shadow: var(--buttonSubmitActiveBoxShadow);
+  transform: translateY(4px);
+}
+
+.score {
+  font-size: var(--textScoreSize);
+  font-weight: bold;
+  margin: 5%;
+}
+
+.inputName {
+  font-size: var(--inputTextSize);
+  font-weight: bold;
+  margin: 5% 0, 5%;
+  border: none;
+  border-bottom: 1px solid var(--textButtonQuizColor);
+  background-color: var(--inputNameBackgroundColor);
+  color: var(--inputNameTextColor);
 }
 
 @media screen and (min-width: 700px) {
@@ -82,8 +164,16 @@
     width: 45%;
   }
 
-  .pacMan {
-    justify-content: center;
-    align-items: center;
+  .answerButtonSelected {
+    width: 45%;
   }
+}
+
+#answerText {
+  font-size: 0.9rem;
+}
+
+answerSubmit {
+  color: var(--buttonSubmitHoverBackgroundColor);
+  font-size: 0.9rem;
 }
