@@ -1,13 +1,36 @@
-import React from "react";
+import { useState } from "react";
+import Modal from "react-modal";
 import { Link } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
+import Video from "@components/Layout-components/Video/Video";
 
 import "@assets/css/Error.css";
 
 import lottieBackground from "@assets/lottie-file/background-quiz.json";
 import satellite from "@assets/lottie-file/satellite-error.json";
 
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+
 export default function Error() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <Player
@@ -25,7 +48,14 @@ export default function Error() {
             src={satellite}
             style={{ height: "300px", width: "300px" }}
           />
-          <div className="errorTitle">404</div>
+          <div
+            role="presentation"
+            className="errorTitle"
+            onClick={openModal}
+            onKeyDown={openModal}
+          >
+            404
+          </div>
           <p>Il semblerais que vous êtes tombé dans un trou noir...</p>
           <p>
             pas de panique ! cliquer sur le bouton pour retourner sur la page
@@ -39,7 +69,32 @@ export default function Error() {
             </Link>
           </div>
         </div>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          style={customStyles}
+          overlayClassName="modal-overlay"
+        >
+          <Video src="./elephant.mp4" autoPlay />
+        </Modal>
       </section>
+      {/*
+        __                 
+        '. \  🅷🅴🅻🅻🅾, 🅼🆈 🅽🅰🅼🅴 🅸🆂 🅴🅻🅼🅴🆁 ❗
+        '- \               
+          / /_         .---.
+        / | \\,.\/--.//    )
+        |  \//        )/  / 
+          \  ' ^ ^    /    )____.----..  6
+          '.____.    .___/            \._) 
+              .\/.                      )
+              '\                       /
+              _/ \/    ).        )    (
+              /#  .!    |        /\    /
+              \  C// #  /'-----''/ #  / 
+          .   'C/ |    |    |   |    |mrf  ,
+          \), .. .'OOO-'. ..'OOO'OOO-'. ..\(,
+      */}
     </>
   );
 }
