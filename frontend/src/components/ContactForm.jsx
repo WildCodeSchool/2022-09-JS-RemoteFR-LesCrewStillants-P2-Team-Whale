@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import planet from "@assets/planet.png";
 
 import "./ContactForm.css";
+import {toast} from "react-toastify";
+
+const notifySubmitForm = () => toast(`Merci de votre envoi !`);
 
 function ContactForm() {
   const [status, setStatus] = useState("Submit");
@@ -24,12 +27,17 @@ function ContactForm() {
     setStatus("Submit");
     const result = await response.json();
     // eslint-disable-next-line no-alert
-    alert(result.status);
   };
 
   return (
     <div className="container">
-      <form onSubmit={handleSubmit} className="form-box">
+      <form
+        onSubmit={() => {
+          handleSubmit();
+          notifySubmitForm();
+        }}
+        className="form-box"
+      >
         <span>
           <h1 className="title-contact">Contacter Nous</h1>
           <img className="img-alien" src={planet} alt="Visage_Alien" />
