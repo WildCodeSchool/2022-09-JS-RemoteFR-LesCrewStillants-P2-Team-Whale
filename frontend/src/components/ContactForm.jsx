@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import planet from "@assets/planet.png";
 
 import "./ContactForm.css";
-import {toast} from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 const notifySubmitForm = () => toast(`Merci de votre envoi !`);
 
@@ -17,7 +17,7 @@ function ContactForm() {
       email: email.value,
       message: message.value,
     };
-    const response = await fetch("http://localhost:3000/contact", {
+    await fetch("http://localhost:3000/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -25,8 +25,6 @@ function ContactForm() {
       body: JSON.stringify(details),
     });
     setStatus("Submit");
-    const result = await response.json();
-    // eslint-disable-next-line no-alert
   };
 
   return (
@@ -59,6 +57,7 @@ function ContactForm() {
           {status}
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 }
