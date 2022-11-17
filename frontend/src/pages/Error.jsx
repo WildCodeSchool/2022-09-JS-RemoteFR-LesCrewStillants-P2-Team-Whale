@@ -8,6 +8,7 @@ import "@assets/css/Error.css";
 
 import lottieBackground from "@assets/lottie-file/background-quiz.json";
 import satellite from "@assets/lottie-file/satellite-error.json";
+import elephant from "@assets/lottie-file/elephant.json";
 
 const customStyles = {
   content: {
@@ -22,9 +23,11 @@ const customStyles = {
 
 export default function Error() {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [lottieError, setLottieError] = useState(satellite);
 
   const openModal = () => {
     setIsOpen(true);
+    setLottieError(elephant);
   };
 
   const closeModal = () => {
@@ -45,7 +48,7 @@ export default function Error() {
             className="lottie-error"
             loop
             autoplay
-            src={satellite}
+            src={lottieError}
             style={{ height: "300px", width: "300px" }}
           />
           <div
@@ -74,8 +77,9 @@ export default function Error() {
           onRequestClose={closeModal}
           style={customStyles}
           overlayClassName="modal-overlay"
+          ariaHideApp={false}
         >
-          <Video src="./elephant.mp4" autoPlay />
+          <Video controls={false} src="./elephant.mp4" autoPlay />
         </Modal>
       </section>
       {/*

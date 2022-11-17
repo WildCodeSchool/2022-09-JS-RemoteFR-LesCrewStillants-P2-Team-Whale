@@ -12,9 +12,6 @@ function Navbar() {
       <a className="menu-item" href="/quiz">
         ❓- Quiz
       </a>
-      <a className="menu-item" href="/services">
-        📰 - Wiki
-      </a>
       <a className="menu-item" href="/contact">
         🛰️ - Contact us
       </a>
