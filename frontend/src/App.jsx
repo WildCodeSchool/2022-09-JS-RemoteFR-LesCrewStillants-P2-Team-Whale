@@ -2,7 +2,7 @@ import React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
-import "./App.css";
+import "@assets/css/App.css";
 
 const Home = React.lazy(() => import("@pages/Home"));
 const Quiz = React.lazy(() => import("@pages/Quiz"));

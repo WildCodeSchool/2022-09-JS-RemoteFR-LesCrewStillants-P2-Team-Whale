@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import planet from "@assets/planet.png";
+import planet from "@assets/img/planet.png";
 
 import "./ContactForm.css";
 import { toast, ToastContainer } from "react-toastify";

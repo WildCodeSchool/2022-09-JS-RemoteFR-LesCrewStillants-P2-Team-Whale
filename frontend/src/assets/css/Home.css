@@ -16,7 +16,7 @@ h1 {
 }
 
 .quiz-header {
-  background-image: url("@assets/header-quizz.png");
+  background-image: url("@assets/img/header-quizz.png");
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
