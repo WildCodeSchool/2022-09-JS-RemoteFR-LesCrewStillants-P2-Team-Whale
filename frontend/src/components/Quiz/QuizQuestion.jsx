@@ -1,5 +1,6 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import questionService from "@services/QuestionService";
 import book from "@assets/lottie-file/book.json";
 import loader from "@assets/lottie-file/loader.json";
@@ -21,13 +22,9 @@ export default function QuizQuestion({ difficulty }) {
       score,
     };
     if (difficulty !== "easy") {
-      questionService.insertHardScore(user).then((response) => {
-        setQuestion(response);
-      });
+      await axios.post("https://api.quizverse.space/scores/hard", user);
     } else {
-      questionService.insertEasyScore(user).then((response) => {
-        setQuestion(response);
-      });
+      await axios.post("https://api.quizverse.space/scores/easy", user);
     }
   }
 
