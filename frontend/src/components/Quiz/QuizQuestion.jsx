@@ -2,6 +2,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { useState, useEffect } from "react";
 import questionService from "@services/QuestionService";
 import book from "@assets/lottie-file/book.json";
+import loader from "@assets/lottie-file/loader.json";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
@@ -137,7 +138,17 @@ export default function QuizQuestion({ difficulty }) {
         </>
       ) : (
         <>
-          {!question && <div>loading...</div>}
+          {!question && (
+            <div>
+              <Player
+                className="lottie-error"
+                loop
+                autoplay
+                src={loader}
+                style={{ height: "300px", width: "300px" }}
+              />
+            </div>
+          )}
           {question && (
             <>
               <Player

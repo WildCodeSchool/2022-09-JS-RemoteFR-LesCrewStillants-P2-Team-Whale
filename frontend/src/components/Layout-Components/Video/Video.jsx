@@ -1,4 +1,4 @@
-function Video({ src, autoPlay, controls }) {
+export default function Video({ src, autoPlay, controls }) {
   return (
     <video controls={controls} width="100%" autoPlay={autoPlay}>
       <source src={src} type="video/mp4" />
@@ -7,5 +7,3 @@ function Video({ src, autoPlay, controls }) {
     </video>
   );
 }
-
-export default Video;
