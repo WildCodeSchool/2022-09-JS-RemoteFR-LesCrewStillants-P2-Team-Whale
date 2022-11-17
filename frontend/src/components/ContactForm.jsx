@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import planet from "@assets/planet.png";
 
 import "./ContactForm.css";
+import { toast, ToastContainer } from "react-toastify";
+
+const notifySubmitForm = () => toast(`Merci de votre envoi !`);
 
 function ContactForm() {
   const [status, setStatus] = useState("Submit");
@@ -14,7 +17,7 @@ function ContactForm() {
       email: email.value,
       message: message.value,
     };
-    const response = await fetch("http://localhost:3000/contact", {
+    await fetch("http://localhost:3000/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -22,14 +25,17 @@ function ContactForm() {
       body: JSON.stringify(details),
     });
     setStatus("Submit");
-    const result = await response.json();
-    // eslint-disable-next-line no-alert
-    alert(result.status);
   };
 
   return (
     <div className="container">
-      <form onSubmit={handleSubmit} className="form-box">
+      <form
+        onSubmit={() => {
+          handleSubmit();
+          notifySubmitForm();
+        }}
+        className="form-box"
+      >
         <span>
           <h1 className="title-contact">Contacter Nous</h1>
           <img className="img-alien" src={planet} alt="Visage_Alien" />
@@ -51,6 +57,7 @@ function ContactForm() {
           {status}
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 }
