@@ -20,11 +20,11 @@ export default function QuizQuestion({ difficulty }) {
       score,
     };
     if (difficulty !== "easy") {
-      questionService.insertEasyScore(user).then((response) => {
+      questionService.insertHardScore(user).then((response) => {
         setQuestion(response);
       });
     } else {
-      questionService.insertHardScore(user).then((response) => {
+      questionService.insertEasyScore(user).then((response) => {
         setQuestion(response);
       });
     }
