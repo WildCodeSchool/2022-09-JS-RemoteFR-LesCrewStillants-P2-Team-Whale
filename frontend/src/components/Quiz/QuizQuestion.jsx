@@ -4,7 +4,6 @@ import questionService from "@services/QuestionService";
 import book from "@assets/lottie-file/book.json";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
-import axios from "axios";
 import { API_BASE_URL } from "../../axios/AppConfig";
 import "@assets/css/QuizQuestion.css";
 
@@ -15,17 +14,19 @@ export default function QuizQuestion({ difficulty }) {
   const [name, setName] = useState("");
   const [score, setScore] = useState(0);
 
-  // add commentaire
-
   async function addScoreEasy() {
     const user = {
       name,
       score,
     };
     if (difficulty !== "easy") {
-      await axios.post("https://api.quizverse.space/scores/hard", user);
+      questionService.insertEasyScore(user).then((response) => {
+        setQuestion(response);
+      });
     } else {
-      await axios.post("https://api.quizverse.space/scores/easy", user);
+      questionService.insertHardScore(user).then((response) => {
+        setQuestion(response);
+      });
     }
   }
 
