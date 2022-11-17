@@ -1,5 +1,6 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import questionService from "@services/QuestionService";
 import scoreService from "@services/ScoreService";
 import book from "@assets/lottie-file/book.json";
