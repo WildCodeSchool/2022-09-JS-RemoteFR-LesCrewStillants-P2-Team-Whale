@@ -1,6 +1,7 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useState, useEffect } from "react";
 import questionService from "@services/QuestionService";
+import scoreService from "@services/ScoreService";
 import book from "@assets/lottie-file/book.json";
 import loader from "@assets/lottie-file/loader.json";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,17 +16,25 @@ export default function QuizQuestion({ difficulty }) {
   const [name, setName] = useState("");
   const [score, setScore] = useState(0);
 
+  useEffect(() => {
+    if (difficulty === "easy") {
+      questionService.getEsyQuestions().then((response) => {
+        setQuestion(response);
+      });
+    } else if (difficulty === "hard") {
+      questionService.getHardQuestions().then((response) => {
+        setQuestion(response);
+      });
+    }
+  }, [difficulty]);
+
   async function addScoreEasy() {
-    const user = {
-      name,
-      score,
-    };
     if (difficulty !== "easy") {
-      questionService.insertHardScore(user).then((response) => {
+      await scoreService.insertHardScore(name, score).then((response) => {
         setQuestion(response);
       });
     } else {
-      questionService.insertEasyScore(user).then((response) => {
+      await scoreService.insertEasyScore(name, score).then((response) => {
         setQuestion(response);
       });
     }
@@ -71,18 +80,6 @@ export default function QuizQuestion({ difficulty }) {
     }
   };
 
-  useEffect(() => {
-    if (difficulty === "easy") {
-      questionService.getEsyQuestions().then((response) => {
-        setQuestion(response);
-      });
-    } else if (difficulty === "hard") {
-      questionService.getHardQuestions().then((response) => {
-        setQuestion(response);
-      });
-    }
-  }, [difficulty]);
-
   const handleClick = (isCorrect) => {
     if (isCorrect) {
       setScore(score + 1);
@@ -104,7 +101,7 @@ export default function QuizQuestion({ difficulty }) {
       {ShowResult ? (
         <>
           {/* <Player> is a component from the lottiefiles library
-      i using this 'player' for the picture animation */}
+          i using this 'player' for the picture animation */}
           <Player
             autoplay
             loop
