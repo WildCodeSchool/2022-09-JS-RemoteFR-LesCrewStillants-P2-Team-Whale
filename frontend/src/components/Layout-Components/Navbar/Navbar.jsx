@@ -9,10 +9,10 @@ function Navbar() {
       <a className="menu-item" href="/">
         🌍 - Home
       </a>
-      <a className="menu-item" href="/quiz">
+      <a className="menu-item" href="/Quiz">
         ❓- Quiz
       </a>
-      <a className="menu-item" href="/contact">
+      <a className="menu-item" href="/Contact">
         🛰️ - Contact us
       </a>
     </Menu>

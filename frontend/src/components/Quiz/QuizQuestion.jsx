@@ -7,7 +7,7 @@ import loader from "@assets/lottie-file/loader.json";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { API_BASE_URL } from "../../axios/AppConfig";
-import "@assets/css/QuizQuestion.css";
+import "@components/Quiz/QuizQuestion.css";
 
 export default function QuizQuestion({ difficulty }) {
   const [question, setQuestion] = useState(undefined);

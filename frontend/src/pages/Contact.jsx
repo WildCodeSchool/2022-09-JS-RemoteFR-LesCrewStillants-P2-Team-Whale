@@ -1,11 +1,11 @@
-import ContactAbout from "@components/contactAbout";
-import ContactForm from "@components/contactForm";
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
+import ContactAbout from "@components/ContactForm/ContactAbout";
+import ContactForm from "@components/ContactForm/ContactForm";
+import Navbar from "@components/Layout-Components/Navbar/Navbar";
+import Footer from "@components/Layout-Components/Footer/Footer";
 
 import React from "react";
 
-import "./Contact.css";
+import "@assets/css/Contact.css";
 
 export default function Contact() {
   return (
