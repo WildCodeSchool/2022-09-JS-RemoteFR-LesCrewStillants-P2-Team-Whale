@@ -4,6 +4,7 @@ import questionService from "@services/QuestionService";
 import book from "@assets/lottie-file/book.json";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
+import axios from "axios";
 import { API_BASE_URL } from "../../axios/AppConfig";
 import "@assets/css/QuizQuestion.css";
 
@@ -11,7 +12,24 @@ export default function QuizQuestion({ difficulty }) {
   const [question, setQuestion] = useState(undefined);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [ShowResult, setShowResult] = useState(false);
+  const [name, setName] = useState("");
   const [score, setScore] = useState(0);
+
+  // add commentaire
+
+  async function addScoreEasy() {
+    const user = {
+      name,
+      score,
+    };
+    if (difficulty !== "easy") {
+      await axios.post("https://api.quizverse.space/scores/hard", user);
+    } else {
+      await axios.post("https://api.quizverse.space/scores/easy", user);
+    }
+  }
+
+  const notifySubmit = () => toast(`Votre score a bien été enregistré`);
 
   const notify = (isCorrect, desc) => {
     if (isCorrect) {
@@ -74,7 +92,12 @@ export default function QuizQuestion({ difficulty }) {
     }
   };
 
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
+
   return (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {ShowResult ? (
         <>
@@ -89,13 +112,26 @@ export default function QuizQuestion({ difficulty }) {
           <p className="score">Your score</p>
           <p className="score">{score} / 10</p>
           <p>Almost there !</p>
-          <input className="inputName" type="text" placeholder="Your name" />
+          <input
+            onChange={handleChange}
+            className="inputName"
+            type="text"
+            placeholder="Your name"
+          />
           <div className="buttonScoreContainer">
-            <button type="submit" className="buttonSubmit">
+            <button
+              type="submit"
+              className="buttonSubmit"
+              onClick={() => {
+                addScoreEasy();
+                notifySubmit();
+              }}
+            >
               Submit
             </button>
-            <button type="submit" className="buttonScore" onClick={handleClick}>
-              Accueil
+            <ToastContainer />
+            <button type="submit" className="buttonScore">
+              Recommencer
             </button>
           </div>
         </>
@@ -137,7 +173,6 @@ export default function QuizQuestion({ difficulty }) {
           )}
         </>
       )}
-      )
     </>
   );
 }

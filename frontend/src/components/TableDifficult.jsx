@@ -28,7 +28,7 @@ export default function TableDifficult() {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell align="center">{row.name}</TableCell>
-                <TableCell align="center">{row.score}</TableCell>
+                <TableCell>{row.score}</TableCell>
               </TableRow>
             ))}
         </TableBody>
