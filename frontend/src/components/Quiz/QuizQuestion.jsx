@@ -111,12 +111,14 @@ export default function QuizQuestion({ difficulty }) {
           <p className="score">Your score</p>
           <p className="score">{score} / 10</p>
           <p>Almost there !</p>
-          <input
-            onChange={handleChange}
-            className="inputName"
-            type="text"
-            placeholder="Your name"
-          />
+          <div className="inputClass">
+            <input
+              onChange={handleChange}
+              className="inputName"
+              type="text"
+              placeholder="Your name"
+            />
+          </div>
           <div className="buttonScoreContainer">
             <button
               type="submit"
@@ -130,7 +132,7 @@ export default function QuizQuestion({ difficulty }) {
             </button>
             <ToastContainer />
             <button type="submit" className="buttonScore">
-              Recommencer
+              Retry
             </button>
           </div>
         </>
