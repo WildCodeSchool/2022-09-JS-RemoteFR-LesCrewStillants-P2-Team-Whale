@@ -50,7 +50,7 @@ export default function QuizQuestion({ difficulty }) {
           <p id="answerText">{desc}</p>
         </div>,
         {
-          position: "bottom-center",
+          position: "top-right",
           autoClose: 4000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -67,7 +67,7 @@ export default function QuizQuestion({ difficulty }) {
           <p id="answerText">{desc}</p>
         </div>,
         {
-          position: "bottom-center",
+          position: "top-right",
           autoClose: 4000,
           hideProgressBar: false,
           closeOnClick: true,
