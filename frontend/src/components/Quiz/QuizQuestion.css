@@ -82,9 +82,10 @@
 
 .buttonScoreContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 3rem;
 }
 
 /* Button style */
@@ -95,7 +96,7 @@
   padding: var(--buttonScorePadding);
   text-align: center;
   font-size: var(--buttonScoreTextSize);
-  margin: 5%;
+  margin-left: 1rem;
   cursor: pointer;
   box-shadow: var(--buttonScoreBoxShadow);
   border-radius: var(--buttonScoreBorderRadius);
@@ -118,7 +119,6 @@
   padding: var(--buttonSubmitPadding);
   text-align: center;
   font-size: var(--buttonSubmitTextSiz);
-  margin: 5%;
   cursor: pointer;
   box-shadow: var(--buttonSubmitBoxShadow);
   border-radius: var(--buttonSubmitBorderRadius);
@@ -142,11 +142,15 @@
 .inputName {
   font-size: var(--inputTextSize);
   font-weight: bold;
+  height: 2rem;
+  border-radius: 0.25rem;
   margin: 5% 0, 5%;
   border: none;
   border-bottom: 1px solid var(--textButtonQuizColor);
   background-color: var(--inputNameBackgroundColor);
   color: var(--inputNameTextColor);
+  padding-left: 1rem;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -176,4 +180,10 @@
 answerSubmit {
   color: var(--buttonSubmitHoverBackgroundColor);
   font-size: 0.9rem;
+}
+
+.inputClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
