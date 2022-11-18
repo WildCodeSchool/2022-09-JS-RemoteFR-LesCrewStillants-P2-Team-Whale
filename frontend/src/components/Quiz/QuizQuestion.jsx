@@ -2,10 +2,11 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { useState, useEffect } from "react";
 import questionService from "@services/QuestionService";
 import scoreService from "@services/ScoreService";
-import book from "@assets/lottie-file/book.json";
+import astronautScore from "@assets/lottie-file/astronaut-score.json";
 import loader from "@assets/lottie-file/loader.json";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast, Zoom } from "react-toastify";
+import { Link } from "react-router-dom";
 import { API_BASE_URL } from "../../axios/AppConfig";
 import "@components/Quiz/QuizQuestion.css";
 
@@ -50,7 +51,7 @@ export default function QuizQuestion({ difficulty }) {
           <p id="answerText">{desc}</p>
         </div>,
         {
-          position: "bottom-center",
+          position: "top-right",
           autoClose: 4000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -58,6 +59,7 @@ export default function QuizQuestion({ difficulty }) {
           draggable: true,
           progress: undefined,
           theme: "colored",
+          transition: Zoom,
         }
       );
     } else {
@@ -67,7 +69,7 @@ export default function QuizQuestion({ difficulty }) {
           <p id="answerText">{desc}</p>
         </div>,
         {
-          position: "bottom-center",
+          position: "top-right",
           autoClose: 4000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -75,6 +77,7 @@ export default function QuizQuestion({ difficulty }) {
           draggable: true,
           progress: undefined,
           theme: "colored",
+          transition: Zoom,
         }
       );
     }
@@ -105,10 +108,10 @@ export default function QuizQuestion({ difficulty }) {
           <Player
             autoplay
             loop
-            src={book} // <- or not book
+            src={astronautScore} // <- or not book
             style={{ height: "150px", width: "150px" }}
           />
-          <p className="score">Your score</p>
+          <p className="score">Votre score</p>
           <p className="score">{score} / 10</p>
           <p>Almost there !</p>
           <div className="inputClass">
@@ -128,7 +131,7 @@ export default function QuizQuestion({ difficulty }) {
                 notifySubmit();
               }}
             >
-              Submit
+              Envoyer
             </button>
             <ToastContainer />
             <button type="submit" className="buttonScore">
@@ -177,7 +180,7 @@ export default function QuizQuestion({ difficulty }) {
                   </button>
                 ))}
               </div>
-              <ToastContainer />
+              <ToastContainer newestOnTop />
               <p>{questionIndex + 1}/10</p>
               <p>Mon score : {score}</p>
             </>
