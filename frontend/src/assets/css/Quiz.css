@@ -101,9 +101,16 @@ body {
 @media screen and (min-width: 700px) {
   /* QuizVerse logo */
   .logo {
-    margin-top: 5%;
+    margin-top: 2rem;
+    margin-left: auto ;
+    margin-bottom: 1rem;
     width: auto;
     height: auto;
+  }
+
+  .quizContainer {
+    width: 60rem;
+    height: 35rem;
   }
 
   /* Quiz container question (p) text style */
