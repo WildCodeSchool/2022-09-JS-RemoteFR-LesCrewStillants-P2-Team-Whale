@@ -19,14 +19,17 @@ body {
 /* QuizVerse logo */
 .logo {
   margin: auto;
-  margin-top: 15%;
+  margin-top: 5%;
+  margin-left: 7rem;
+  margin-bottom: 1rem;
   width: 70%;
 }
 
 /* Quiz container style */
 .quizContainer {
   background-color: var(--backgroundContainerQuizColor);
-  width: auto;
+  width: 29rem;
+  height: 40rem;
   padding: 2%;
   margin: 1%;
   box-sizing: border-box;
@@ -46,6 +49,7 @@ body {
   color: var(--paragraphQuizColor);
   text-align: center;
   font-size: var(--paragrapheQuizSize);
+  margin: 1rem;
 }
 
 /* Buttons
@@ -65,7 +69,7 @@ body {
   padding: var(--buttonQuizPadding);
   text-align: center;
   font-size: var(--buttonQuizTextSize);
-  margin: 5% auto;
+  margin: 1rem;
   cursor: pointer;
   box-shadow: var(--buttonQuizBoxShadow);
   border-radius: var(--buttonQuizBorderRadius);
@@ -126,7 +130,6 @@ body {
     padding: var(--buttonQuizPadding);
     text-align: center;
     font-size: var(--buttonQuizTextSize);
-    margin: 5%;
     cursor: pointer;
     border-radius: var(--buttonQuizBorderRadius);
     text-align: center;
