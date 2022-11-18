@@ -26,8 +26,7 @@ body {
 /* Quiz container style */
 .quizContainer {
   background-color: var(--backgroundContainerQuizColor);
-  width: 50rem;
-  height: 540px;
+  width: auto;
   padding: 2%;
   margin: 1%;
   box-sizing: border-box;
