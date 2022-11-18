@@ -58,7 +58,9 @@ h2 {
   padding-top: 5vh;
   font-size: 2rem;
   text-align: center;
+  font-weight: 600;
   color: black;
+  margin-top: 2rem;
 }
 
 .project-content {
