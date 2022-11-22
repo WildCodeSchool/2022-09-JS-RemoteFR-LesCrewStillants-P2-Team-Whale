@@ -1,11 +1,12 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useState, useEffect } from "react";
+import { ToastContainer, toast, Zoom } from "react-toastify";
 import questionService from "@services/QuestionService";
 import scoreService from "@services/ScoreService";
 import astronautScore from "@assets/lottie-file/astronaut-score.json";
-import loader from "@assets/lottie-file/loader.json";
+import Loader from "@components/Layout-Components/Loader/Loader";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast, Zoom } from "react-toastify";
+
 import { API_BASE_URL } from "../../axios/AppConfig";
 import "@components/Quiz/QuizQuestion.css";
 
@@ -149,13 +150,7 @@ export default function QuizQuestion({ difficulty }) {
         <>
           {!question && (
             <div>
-              <Player
-                className="lottie-error"
-                loop
-                autoplay
-                src={loader}
-                style={{ height: "300px", width: "300px" }}
-              />
+              <Loader />
             </div>
           )}
           {question && (

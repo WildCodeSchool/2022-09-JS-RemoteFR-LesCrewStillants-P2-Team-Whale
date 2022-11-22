@@ -1,6 +1,6 @@
 import api from "../axios/FetchInterceptor";
 
-// insert question
+// insert score
 const scoreService = {};
 
 // get all easy scores

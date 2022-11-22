@@ -57,7 +57,7 @@ body {
 /* Button container */
 .buttonContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 }
 
@@ -102,7 +102,7 @@ body {
   /* QuizVerse logo */
   .logo {
     margin-top: 2rem;
-    margin-left: auto ;
+    margin-left: auto;
     margin-bottom: 1rem;
     width: auto;
     height: auto;
@@ -137,6 +137,7 @@ body {
     padding: var(--buttonQuizPadding);
     text-align: center;
     font-size: var(--buttonQuizTextSize);
+    margin: 1rem;
     cursor: pointer;
     border-radius: var(--buttonQuizBorderRadius);
     text-align: center;
