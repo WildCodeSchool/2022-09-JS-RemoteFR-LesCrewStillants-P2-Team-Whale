@@ -18,7 +18,7 @@ scoreService.insertContact = (name, mail, message) => {
     data: {
       name: name,
       mail: mail,
-      message: message
+      message: message,
     },
   }).then((res) => res.data); // Return response
 };
