@@ -26,17 +26,14 @@ export default function Home() {
         <section className="project-content">
           <div className="project-description">
             <p>
-              Lorem ipsum dolor sit amet. Non distinctio aspernatur ea
-              voluptatibus culpa est excepturi facilis. Non labore impedit aut
-              dicta deleniti aut explicabo maiores nam eveniet veniam ut ullam
-              corporis consequuntur voluptate.
+              Notre site est un quiz qui se veut ludique sur les connaissances
+              des internautes sur le système solaire.
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet. Non distinctio aspernatur ea
-              voluptatibus culpa est excepturi facilis. Non labore impedit aut
-              dicta deleniti aut explicabo maiores nam eveniet veniam ut ullam
-              corporis consequuntur voluptate.
+              Ce projet a été créé par la formidable équipe de Yohan Rosano,
+              Sébastien Artesi, Valentin Dupin, Victoire Michel et Mathieu
+              Langlois.
             </p>
           </div>
           <img className="logo-wild" src={wild} alt="wild-logo" />
