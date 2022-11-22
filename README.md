@@ -62,5 +62,5 @@ The site will be presented several times during intermediaires presentations and
 
 ```bash
 npm run setup
-npm start
+npm run dev
 ```
