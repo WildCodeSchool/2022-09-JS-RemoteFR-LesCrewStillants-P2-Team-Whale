@@ -6,6 +6,7 @@ import scoreService from "@services/ScoreService";
 import astronautScore from "@assets/lottie-file/astronaut-score.json";
 import Loader from "@components/Layout-Components/Loader/Loader";
 import "react-toastify/dist/ReactToastify.css";
+
 import { API_BASE_URL } from "../../axios/AppConfig";
 import "@components/Quiz/QuizQuestion.css";
 
@@ -40,7 +41,11 @@ export default function QuizQuestion({ difficulty }) {
     }
   }
 
-  const notifySubmit = () => toast(`Votre score a bien été enregistré`);
+  const notifySubmit = () => {
+    if (name.length <= 20 && name.length > 3) {
+    toast(`Votre score a bien été enregistré`);
+  } else { toast.error(`Votre score n'a pas été enregistré`); }
+    };
 
   const notify = (isCorrect, desc) => {
     if (isCorrect) {
@@ -86,7 +91,7 @@ export default function QuizQuestion({ difficulty }) {
     if (isCorrect) {
       setScore(score + 1);
     }
-    if (questionIndex + 1 < 10) {
+    if (questionIndex + 1 < question.length) {
       setQuestionIndex(questionIndex + 1);
     } else {
       setShowResult(true);
@@ -96,6 +101,10 @@ export default function QuizQuestion({ difficulty }) {
   const handleChange = (e) => {
     setName(e.target.value);
   };
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
@@ -112,7 +121,6 @@ export default function QuizQuestion({ difficulty }) {
           />
           <p className="score">Votre score</p>
           <p className="score">{score} / 10</p>
-          <p>Almost there !</p>
           <div className="inputClass">
             <input
               onChange={handleChange}
@@ -133,7 +141,7 @@ export default function QuizQuestion({ difficulty }) {
               Envoyer
             </button>
             <ToastContainer />
-            <button type="submit" className="buttonScore">
+            <button type="submit" className="buttonScore" onClick={refreshPage}>
               Retry
             </button>
           </div>
@@ -161,12 +169,12 @@ export default function QuizQuestion({ difficulty }) {
                     className="answerButton"
                     key={answer.id}
                     onClick={() => {
-                      handleClick(answer.isCorrect);
                       notify(
                         answer.isCorrect,
                         question[questionIndex].description,
                         answer.isCorrect
                       );
+                      handleClick(answer.isCorrect);
                     }}
                   >
                     {answer.name}
