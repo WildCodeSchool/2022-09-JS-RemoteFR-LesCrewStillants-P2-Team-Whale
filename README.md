@@ -1,47 +1,68 @@
-# Team Dev
+# Projet 2 :"QuizVerse - Quiz about the universe"
 
-  - Victoire 
-  - Valentin
-  - Yohan
-  - Mathieu
-  - Sébastien
+## Team
 
-## Project and Site Architecture
+Number of participants : 5
 
-![image](https://user-images.githubusercontent.com/104688712/196696859-34c0d0e9-799f-4f62-8861-1062ebb1811b.png)
+- Victoire
+- Yohann
+- Mathieu
+- Sébastien
+- Valentin
 
-Creation of a Quiz about space from the API Open Data Système Solaire (https://api.le-systeme-solaire.net/)
+## Pitch
 
-## GitHub Repository
+For a project at the Wild Code School, we had to develop in group an application in React that would allow us to use an API. We chose to develop a quiz on the theme of the universe. The application is responsive.
 
-![image](https://user-images.githubusercontent.com/104688712/196697823-b9837e8b-a2b5-449f-95d2-088d9837f0c0.png)
+## Site structuring
 
+```mermaid
+graph TD;
+    Homepage-->Quiz;
+    Homepage-->Contact-us;
+```
 
-### Project Initialization
+### Homepage
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- Run command `npm run setup`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+The homepage includes a header allowing direct access to the quiz, a table displaying the last 5 participations of the players in the "easy" and "difficult" category, a description of the project and a footer.
+Our work also focused on setting up a footer with a burger menu and a footer including the (fictitious) social networks of our project.
 
-### Available Commands
+### Quiz
 
-- `setup` : Initialization of frontend and backend, as well as all toolings
-- `migrate` : Run the database migration script
-- `dev` : Starts both servers (frontend + backend) in one terminal
-- `dev-front` : Starts the React frontend server
-- `dev-back` : Starts the Express backend server
-- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
-- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
+The quiz was designed using our own API (https://api.quizverse.space) that we created as part of the project. Two levels are possible, easy and hard, with 10 questions in each level with 4 answers to each question.
+A toastify alert allows to bring additional elements to the right or wrong answer of the player. Finally, at the end of the quiz, the player has the possibility to leave his name so that his participation can be displayed in the Homepage.
 
-## FAQ
+### Contact-us
 
-### Tools
+We have developed a contact page allowing the player or visitor to send us an email. This page has been created with the Emailjs library. Each message is sent to our email address.
 
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
-- _Nodemon_ : Allows to restart the server everytime a .js file is udated
+## Project development
+
+We validated the first wireframes in 3 steps (paper / Figma) with the client.
+
+The format of the site will be necessary for mobile screens (480px) and desktop screens (1024px)
+
+## GitHub repository
+
+We have created a folder on GitHub that is structured like this:
+
+```mermaid
+graph TD;
+    main-->dev;
+    dev<-->Sprint##;
+    dev<-->fix-##-##;
+    Sprint##-->feature-##-##;
+```
+
+## Presentation
+
+The site will be presented several times during intermediaires presentations and will be presented to our entire graduating class on Wednesday, November 23, 2022.
+
+## Setup
+
+To run this project, install it locally using npm: (only front folder is necessary)
+
+```bash
+npm run setup
+npm run dev-front
+```
