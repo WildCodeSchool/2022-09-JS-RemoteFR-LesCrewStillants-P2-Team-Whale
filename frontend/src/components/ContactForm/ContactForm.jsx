@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import planet from "@assets/img/planet.png";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
@@ -7,22 +7,17 @@ import "react-toastify/dist/ReactToastify.css";
 import "./ContactForm.css";
 
 function ContactForm() {
-  const [status, setStatus] = useState("Submit");
-
-  const form = useRef();
-
   const notify = () => toast("Votre message a bien été envoyé !");
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_9732ss8', 'template_3usisll', e.target, 'tVjSsWVer-z-UI8tR')
-      .then(
-        (result) => {
-          console.log(result.text);
-        }, (error) => {
-          console.log(error.text);
-        });
+    emailjs.sendForm(
+      "service_9732ss8",
+      "template_3usisll",
+      e.target,
+      "tVjSsWVer-z-UI8tR"
+    );
   };
 
   return (
@@ -49,8 +44,11 @@ function ContactForm() {
           type="submit"
           className="buttonSubmit"
           value="Send"
-          onClick={() => {notify()}}>
-          {status}
+          onClick={() => {
+            notify();
+          }}
+        >
+          Envoyer
         </button>
       </form>
       <ToastContainer />
