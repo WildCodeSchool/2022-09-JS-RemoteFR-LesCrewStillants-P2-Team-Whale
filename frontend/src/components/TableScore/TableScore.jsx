@@ -1,7 +1,7 @@
 import { Tab } from "@headlessui/react";
 import "./TableScore.css";
-import TableDifficult from "@components/TableDifficult";
-import TableEasy from "@components/TableEasy";
+import TableDifficult from "@components/TableScore/TableDifficult";
+import TableEasy from "@components/TableScore/TableEasy";
 import { useState } from "react";
 
 export default function TableScore() {

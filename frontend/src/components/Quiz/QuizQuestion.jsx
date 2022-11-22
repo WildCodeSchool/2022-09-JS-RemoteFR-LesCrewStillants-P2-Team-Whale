@@ -1,13 +1,14 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useState, useEffect } from "react";
+import { ToastContainer, toast, Zoom } from "react-toastify";
 import questionService from "@services/QuestionService";
 import scoreService from "@services/ScoreService";
-import book from "@assets/lottie-file/book.json";
-import loader from "@assets/lottie-file/loader.json";
+import astronautScore from "@assets/lottie-file/astronaut-score.json";
+import Loader from "@components/Layout-Components/Loader/Loader";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+
 import { API_BASE_URL } from "../../axios/AppConfig";
-import "@assets/css/QuizQuestion.css";
+import "@components/Quiz/QuizQuestion.css";
 
 export default function QuizQuestion({ difficulty }) {
   const [question, setQuestion] = useState(undefined);
@@ -40,7 +41,13 @@ export default function QuizQuestion({ difficulty }) {
     }
   }
 
-  const notifySubmit = () => toast(`Votre score a bien été enregistré`);
+  const notifySubmit = () => {
+    if (name.length <= 20 && name.length >= 3) {
+      toast(`Votre score a bien été enregistré`);
+    } else {
+      toast.error(`Votre pseudo doit comporter de 3 à 20 caractères.`);
+    }
+  };
 
   const notify = (isCorrect, desc) => {
     if (isCorrect) {
@@ -50,7 +57,7 @@ export default function QuizQuestion({ difficulty }) {
           <p id="answerText">{desc}</p>
         </div>,
         {
-          position: "bottom-center",
+          position: "top-right",
           autoClose: 4000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -58,6 +65,7 @@ export default function QuizQuestion({ difficulty }) {
           draggable: true,
           progress: undefined,
           theme: "colored",
+          transition: Zoom,
         }
       );
     } else {
@@ -67,7 +75,7 @@ export default function QuizQuestion({ difficulty }) {
           <p id="answerText">{desc}</p>
         </div>,
         {
-          position: "bottom-center",
+          position: "top-right",
           autoClose: 4000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -75,6 +83,7 @@ export default function QuizQuestion({ difficulty }) {
           draggable: true,
           progress: undefined,
           theme: "colored",
+          transition: Zoom,
         }
       );
     }
@@ -84,7 +93,7 @@ export default function QuizQuestion({ difficulty }) {
     if (isCorrect) {
       setScore(score + 1);
     }
-    if (questionIndex + 1 < 10) {
+    if (questionIndex + 1 < question.length) {
       setQuestionIndex(questionIndex + 1);
     } else {
       setShowResult(true);
@@ -94,6 +103,10 @@ export default function QuizQuestion({ difficulty }) {
   const handleChange = (e) => {
     setName(e.target.value);
   };
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
@@ -105,18 +118,19 @@ export default function QuizQuestion({ difficulty }) {
           <Player
             autoplay
             loop
-            src={book} // <- or not book
+            src={astronautScore} // <- or not book
             style={{ height: "150px", width: "150px" }}
           />
-          <p className="score">Your score</p>
+          <p className="score">Votre score</p>
           <p className="score">{score} / 10</p>
-          <p>Almost there !</p>
-          <input
-            onChange={handleChange}
-            className="inputName"
-            type="text"
-            placeholder="Your name"
-          />
+          <div className="inputClass">
+            <input
+              onChange={handleChange}
+              className="inputName"
+              type="text"
+              placeholder="Your name"
+            />
+          </div>
           <div className="buttonScoreContainer">
             <button
               type="submit"
@@ -126,11 +140,11 @@ export default function QuizQuestion({ difficulty }) {
                 notifySubmit();
               }}
             >
-              Submit
+              Envoyer
             </button>
             <ToastContainer />
-            <button type="submit" className="buttonScore">
-              Recommencer
+            <button type="submit" className="buttonScore" onClick={refreshPage}>
+              Retry
             </button>
           </div>
         </>
@@ -138,13 +152,7 @@ export default function QuizQuestion({ difficulty }) {
         <>
           {!question && (
             <div>
-              <Player
-                className="lottie-error"
-                loop
-                autoplay
-                src={loader}
-                style={{ height: "300px", width: "300px" }}
-              />
+              <Loader />
             </div>
           )}
           {question && (
@@ -163,19 +171,19 @@ export default function QuizQuestion({ difficulty }) {
                     className="answerButton"
                     key={answer.id}
                     onClick={() => {
-                      handleClick(answer.isCorrect);
                       notify(
                         answer.isCorrect,
                         question[questionIndex].description,
                         answer.isCorrect
                       );
+                      handleClick(answer.isCorrect);
                     }}
                   >
                     {answer.name}
                   </button>
                 ))}
               </div>
-              <ToastContainer />
+              <ToastContainer newestOnTop />
               <p>{questionIndex + 1}/10</p>
               <p>Mon score : {score}</p>
             </>

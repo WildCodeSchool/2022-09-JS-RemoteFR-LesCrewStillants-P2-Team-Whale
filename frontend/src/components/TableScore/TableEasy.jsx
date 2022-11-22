@@ -7,12 +7,13 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useEffect, useState } from "react";
 import ScoreService from "@services/ScoreService";
+import Loader from "@components/Layout-Components/Loader/Loader";
 
-export default function TableDifficult() {
+export default function TableEasy() {
   const [score, setScore] = useState(undefined);
 
   useEffect(() => {
-    ScoreService.getAllHard().then((data) => {
+    ScoreService.getAllEasy().then((data) => {
       setScore(data);
     });
   }, []);
@@ -20,7 +21,11 @@ export default function TableDifficult() {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 460 }} aria-label="simple table">
         <TableBody>
-          {!score && <div>Chargement</div>}
+          {!score && (
+            <div>
+              <Loader />
+            </div>
+          )}
           {score &&
             score.slice(0, 5).map((row) => (
               <TableRow

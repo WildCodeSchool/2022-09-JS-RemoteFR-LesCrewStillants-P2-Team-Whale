@@ -2,11 +2,10 @@ import React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
-import "./App.css";
+import "@assets/css/App.css";
 
 const Home = React.lazy(() => import("@pages/Home"));
 const Quiz = React.lazy(() => import("@pages/Quiz"));
-const Score = React.lazy(() => import("@pages/QuizScore"));
 const Error = React.lazy(() => import("@pages/Error"));
 const Contact = React.lazy(() => import("@pages/Contact"));
 
@@ -31,14 +30,6 @@ function App() {
           element={
             <React.Suspense fallback={<>...</>}>
               <Quiz />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="quiz/score"
-          element={
-            <React.Suspense fallback={<>...</>}>
-              <Score />
             </React.Suspense>
           }
         />

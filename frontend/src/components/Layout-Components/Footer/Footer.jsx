@@ -1,9 +1,9 @@
 import "./Footer.css";
-import planete from "@assets/Planets.svg";
-import facebook from "@assets/Facebook.svg";
-import insta from "@assets/Instagramme.svg";
-import twitter from "@assets/Twitter.svg";
-import QR from "@assets/LogoQR.svg";
+import planete from "@assets/img/Planets.svg";
+import facebook from "@assets/img/Facebook.svg";
+import insta from "@assets/img/Instagramme.svg";
+import twitter from "@assets/img/Twitter.svg";
+import QR from "@assets/img/LogoQR.svg";
 
 function Footer() {
   return (
@@ -23,7 +23,7 @@ function Footer() {
         <img className="QV" src={QR} alt="Logo_QV" />
 
         <div className="contactUs">
-          <a className="liens" href="Home.jsx">
+          <a className="liens" href="../../../pages/Home">
             Contact Us{" "}
           </a>
           <p className="Mention"> Mentions légales</p>
