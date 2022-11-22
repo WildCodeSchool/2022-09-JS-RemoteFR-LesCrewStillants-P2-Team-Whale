@@ -1,59 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import planet from "@assets/img/planet.png";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./ContactForm.css";
-import { toast, ToastContainer } from "react-toastify";
-
-const notifySubmitForm = () => toast(`Merci de votre envoi !`);
 
 function ContactForm() {
   const [status, setStatus] = useState("Submit");
-  const handleSubmit = async (e) => {
+
+  const form = useRef();
+
+  const notify = () => toast("Votre message a bien été envoyé !");
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    setStatus("HI...");
-    const { name, email, message } = e.target.elements;
-    const details = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    await fetch("http://localhost:3000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
-    setStatus("Submit");
+
+    emailjs.sendForm('service_9732ss8', 'template_3usisll', e.target, 'tVjSsWVer-z-UI8tR')
+      .then(
+        (result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
   };
 
   return (
     <div className="container">
-      <form
-        onSubmit={() => {
-          handleSubmit();
-          notifySubmitForm();
-        }}
-        className="form-box"
-      >
+      <form onSubmit={sendEmail} className="form-box">
         <span>
-          <h1 className="title-contact">Contacter Nous</h1>
+          <h1 className="title-contact">Contactez-nous</h1>
           <img className="img-alien" src={planet} alt="Visage_Alien" />
         </span>
 
         <div>
           <label htmlFor="name">Nom</label>
-          <input type="text" id="name" required />
+          <input type="text" name="user_name" required />
         </div>
         <div>
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" required />
+          <input type="email" name="user_email" required />
         </div>
         <div>
           <label htmlFor="message">Message</label>
-          <textarea id="message" required />
+          <textarea name="message" />
         </div>
-        <button type="submit" className="buttonSubmit">
+        <button
+          type="submit"
+          className="buttonSubmit"
+          value="Send"
+          onClick={() => {notify()}}>
           {status}
         </button>
       </form>
