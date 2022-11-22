@@ -60,7 +60,11 @@ The site will be presented several times during intermediaires presentations and
 
 ## Setup
 
+To run this project, install it locally using npm: (only front folder is necessary)
+
+```bash
+
 ```bash
 npm run setup
-npm run dev
+npm run dev-front
 ```
