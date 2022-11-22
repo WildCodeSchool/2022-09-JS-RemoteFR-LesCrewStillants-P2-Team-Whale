@@ -42,10 +42,12 @@ export default function QuizQuestion({ difficulty }) {
   }
 
   const notifySubmit = () => {
-    if (name.length <= 20 && name.length > 3) {
-    toast(`Votre score a bien été enregistré`);
-  } else { toast.error(`Votre pseudo doit comporter de 3 à 20 caractères.`); }
-    };
+    if (name.length <= 20 && name.length >= 3) {
+      toast(`Votre score a bien été enregistré`);
+    } else {
+      toast.error(`Votre pseudo doit comporter de 3 à 20 caractères.`);
+    }
+  };
 
   const notify = (isCorrect, desc) => {
     if (isCorrect) {
